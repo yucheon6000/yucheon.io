@@ -493,6 +493,7 @@ a.active {
     overflow: hidden;
     display: block;
     margin-bottom: 30px;
+    cursor: unset;
 }
 
 .portfolio_item .portfolio_item_hover {

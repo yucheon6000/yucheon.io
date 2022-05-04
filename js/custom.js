@@ -162,4 +162,6 @@ $(document).ready(function () {
     //     });
 
     // });
+
+    $(".portfolio_item").off("click");
 });
