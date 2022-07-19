@@ -801,3 +801,17 @@ fieldset {
         font-size: 10px;
     }
 }
+
+/* 자체 추가 */
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable i {
+    display: block;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 15px;
+}
