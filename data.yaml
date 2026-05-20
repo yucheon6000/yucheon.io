@@ -1,0 +1,77 @@
+profile:
+  name: "Yucheon Park"
+  title: "Integrated M.S./Ph.D. Student"
+  affiliation: "Cognition & Intelligence Lab,<br/>GIST"
+  email: "yucheon6000@gm.gist.ac.kr"
+  location: "Gwangju, South Korea"
+  image_url: "https://avatars.githubusercontent.com/u/95568961?v=4"
+  cv_url: "assets/cv/cv.pdf"
+  social:
+    google_scholar: "https://scholar.google.com/citations?user=YNZB8MMAAAAJ&hl=en"
+    github: "https://github.com/yucheon6000"
+    linkedin: "https://linkedin.com/in/yucheon"
+
+about:
+  paragraphs:
+    - "Hello! I am a researcher focusing on [Your Research Area]. I am currently at [Your Institution] working with [Advisor/Group]."
+    - "My research interests lie at the intersection of [Interest 1], [Interest 2], and [Interest 3]. I am passionate about solving complex problems and creating innovative solutions that bridge the gap between theory and practice."
+
+news:
+  - date: "May 2026"
+    content: "Our paper on [Topic] was accepted to [Conference]."
+  - date: "Jan 2026"
+    content: "Joined [Institution] as a [Position]."
+
+publications:
+  - year: "2026"
+    title: "PREFAB: PREFerence-based Affective Modeling for Low-Budget Self-Annotation"
+    authors: "Jaeyoung Moon, Youjin Choi, <b>Yucheon Park</b>, David Melhart, Georgios N. Yannakakis, Kyung-Joong Kim"
+    venue: "ACM CHI 2026 (🏆 Honourable Mention Awarded) · Apr 13, 2026"
+    image_url: ""
+    links:
+      - label: "Show publication"
+        url: "#"
+  - year: "2025"
+    title: "A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation"
+    authors: "Eunju Kwon, Seungwon Oh, In-Chang Baek, <b>Yucheon Park</b>, Gyungbo Kim, JaeYoung Moon, Yunho Choi, Kyung-Joong Kim"
+    venue: "IROS 2025 Workshop on Robotic Fine Manipulation: Integrating Tactile, Visual, and Intelligent Control · Oct 20, 2025"
+    image_url: ""
+    links:
+      - label: "Show publication"
+        url: "#"
+  - year: "2024"
+    title: "A Study on the Development Method of Mobility AR Content Interacting with Environmental Objects in Autonomous Driving Situations"
+    authors: "<b>Yucheon Park</b>, Byungpyo Kyung"
+    venue: "Korean Institute of Smart Media (2024 Fall Academic Conference) · Oct 12, 2024"
+    image_url: ""
+    links:
+      - label: "Show publication"
+        url: "#"
+  - year: "2023"
+    title: "A Proposal for a Novel Input-Output Approach in Interactive Media Games: A Study on Shadow Detection Technology"
+    authors: "<b>Yucheon Park</b>, Yejin Kang, Geunyeong Park, Yoonwoo Jang, Dasom Jung, Byungpyo Kyung"
+    venue: "Korea Game Society (2023 Spring Academic Conference) · Jun 3, 2023"
+    image_url: ""
+    links:
+      - label: "Show publication"
+        url: "#"
+
+projects:
+  - title: "Project Alpha"
+    description: "A brief description of this amazing project and what it accomplishes."
+    image_text: "Project Image"
+    link: "#"
+  - title: "Project Beta"
+    description: "Another cool project exploring the boundaries of the field."
+    image_text: "Project Image"
+    link: "#"
+
+press:
+  - date: "Apr 2026"
+    title: "Breakthrough in Affective Computing Featured on Tech News"
+    source: "Tech News Daily"
+    link: "#"
+  - date: "Nov 2025"
+    title: "New Dataset Enables Advanced Robotic Manipulation"
+    source: "Robotics Today"
+    link: "#"

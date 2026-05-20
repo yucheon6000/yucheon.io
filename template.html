@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic Profile of {{ profile.name }}">
+    <title>{{ profile.name }} | Academic Profile</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter for body, Playfair Display for headings -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <div class="layout-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="{{ profile.image_url }}" alt="{{ profile.name }}">
+                </div>
+                <h1 class="name">{{ profile.name }}</h1>
+                <h2 class="title">{{ profile.title }}</h2>
+                <p class="affiliation">{{ profile.affiliation }}</p>
+                <div class="contact-info">
+                    <a href="mailto:{{ profile.email }}"><i class="fa-regular fa-envelope"></i> {{ profile.email }}</a>
+                    <span class="location-text"><i class="fa-solid fa-location-dot"></i> {{ profile.location }}</span>
+                </div>
+                <div class="social-links">
+                    {% if profile.social.google_scholar %}
+                    <a href="{{ profile.social.google_scholar }}" aria-label="Google Scholar"><i
+                            class="fa-solid fa-graduation-cap"></i></a>
+                    {% endif %}
+                    {% if profile.social.github %}
+                    <a href="{{ profile.social.github }}" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    {% endif %}
+                    {% if profile.social.linkedin %}
+                    <a href="{{ profile.social.linkedin }}" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    {% endif %}
+                </div>
+                <nav class="nav-menu">
+                    <a href="#about" class="nav-link active">About</a>
+                    <a href="#news" class="nav-link">News</a>
+                    <a href="#publications" class="nav-link">Publications</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#press" class="nav-link">Press</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Right Content -->
+        <main class="content">
+            <section id="about" class="section animate-on-scroll">
+                <h3 class="section-title">About Me</h3>
+                {% for paragraph in about.paragraphs %}
+                <p>{{ paragraph }}</p>
+                {% endfor %}
+                <!--
+                <div class="action-buttons">
+                    <a href="{{ profile.cv_url }}" class="btn btn-primary" target="_blank"><i class="fa-solid fa-download"></i> Download CV</a>
+                </div>
+                -->
+            </section>
+
+            <section id="news" class="section animate-on-scroll">
+                <h3 class="section-title">Latest News</h3>
+                <ul class="news-list">
+                    {% for item in news %}
+                    <li>
+                        <span class="date">{{ item.date }}</span>
+                        <div class="news-content">{{ item.content }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section id="publications" class="section animate-on-scroll">
+                <h3 class="section-title">Publications</h3>
+
+                {% for year, year_pubs in publications|groupby('year')|reverse %}
+                <h4 class="pub-year-heading">{{ year }}</h4>
+                <div class="year-publications">
+                    {% for pub in year_pubs %}
+                    <div class="publication-item">
+                        <div class="pub-thumbnail">
+                            {% if pub.image_url %}
+                            <img src="{{ pub.image_url }}" alt="Thumbnail for {{ pub.title }}">
+                            {% else %}
+                            <div class="pub-thumbnail-placeholder">Paper</div>
+                            {% endif %}
+                        </div>
+                        <div class="pub-details">
+                            <h5 class="pub-title">{{ pub.title }}</h5>
+                            <div class="pub-authors">{{ pub.authors | safe }}</div>
+                            <div class="pub-venue">{{ pub.venue }}</div>
+                            {% if pub.abstract %}
+                            <p class="pub-abstract">{{ pub.abstract }}</p>
+                            {% endif %}
+                            <div class="pub-links">
+                                {% for link in pub.links %}
+                                <a href="{{ link.url }}" class="pub-link">{{ link.label }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </section>
+
+            <section id="projects" class="section animate-on-scroll">
+                <h3 class="section-title">Projects</h3>
+                <div class="projects-grid">
+                    {% for proj in projects %}
+                    <div class="project-card">
+                        <div class="project-image-placeholder">{{ proj.image_text }}</div>
+                        <div class="project-info">
+                            <h4 class="project-title">{{ proj.title }}</h4>
+                            <p class="project-desc">{{ proj.description }}</p>
+                            <a href="{{ proj.link }}" class="project-link">View Project &rarr;</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section id="press" class="section animate-on-scroll">
+                <h3 class="section-title">Press & Media</h3>
+                <div class="press-list">
+                    {% for item in press %}
+                    <a href="{{ item.link }}" class="press-item" target="_blank">
+                        <h4 class="press-title">{{ item.title }}</h4>
+                        <div class="press-meta">{{ item.date }} · {{ item.source }} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8em; margin-left: 0.3em; opacity: 0.7;"></i></div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>&copy; 2026 {{ profile.name }}. Designed with minimalist aesthetics.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
