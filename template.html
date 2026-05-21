@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Academic Profile of {{ profile.name }}">
     <title>{{ profile.name }} | Academic Profile</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Inter for body, Playfair Display for headings -->
+    <!-- Inter for body, Outfit for headings -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -40,14 +47,20 @@
                 </div>
                 <div class="social-links">
                     {% if profile.social.google_scholar %}
-                    <a href="{{ profile.social.google_scholar }}" aria-label="Google Scholar"><i
+                    <a href="{{ profile.social.google_scholar }}" aria-label="Google Scholar" target="_blank"><i
                             class="fa-solid fa-graduation-cap"></i></a>
                     {% endif %}
                     {% if profile.social.github %}
-                    <a href="{{ profile.social.github }}" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="{{ profile.social.github }}" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    {% endif %}
+                    {% if profile.social.youtube %}
+                    <a href="{{ profile.social.youtube }}" aria-label="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    {% endif %}
+                    {% if profile.social.twitter %}
+                    <a href="{{ profile.social.twitter }}" aria-label="Twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                     {% endif %}
                     {% if profile.social.linkedin %}
-                    <a href="{{ profile.social.linkedin }}" aria-label="LinkedIn"><i
+                    <a href="{{ profile.social.linkedin }}" aria-label="LinkedIn" target="_blank"><i
                             class="fa-brands fa-linkedin-in"></i></a>
                     {% endif %}
                 </div>
@@ -55,7 +68,9 @@
                     <a href="#about" class="nav-link active">About</a>
                     <a href="#news" class="nav-link">News</a>
                     <a href="#publications" class="nav-link">Publications</a>
+                    {% if projects %}
                     <a href="#projects" class="nav-link">Projects</a>
+                    {% endif %}
                     <a href="#press" class="nav-link">Press</a>
                 </nav>
             </div>
@@ -111,7 +126,7 @@
                             {% endif %}
                             <div class="pub-links">
                                 {% for link in pub.links %}
-                                <a href="{{ link.url }}" class="pub-link">{{ link.label }}</a>
+                                <a href="{{ link.url }}" class="pub-link" target="_blank">{{ link.label }}</a>
                                 {% endfor %}
                             </div>
                         </div>
@@ -121,36 +136,70 @@
                 {% endfor %}
             </section>
 
-            <section id="projects" class="section animate-on-scroll">
+            {% if projects %}
+            <section id="projects" class="section">
                 <h3 class="section-title">Projects</h3>
                 <div class="projects-grid">
                     {% for proj in projects %}
                     <div class="project-card">
-                        <div class="project-image-placeholder">{{ proj.image_text }}</div>
+                        <div class="project-image">{{ proj.image_text }}</div>
                         <div class="project-info">
                             <h4 class="project-title">{{ proj.title }}</h4>
                             <p class="project-desc">{{ proj.description }}</p>
-                            <a href="{{ proj.link }}" class="project-link">View Project &rarr;</a>
+                            <a href="{{ proj.link }}" class="project-link" target="_blank">View Project &rarr;</a>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
             </section>
+            {% endif %}
 
             <section id="press" class="section animate-on-scroll">
                 <h3 class="section-title">Press & Media</h3>
                 <div class="press-list">
                     {% for item in press %}
                     <a href="{{ item.link }}" class="press-item" target="_blank">
-                        <h4 class="press-title">{{ item.title }}</h4>
-                        <div class="press-meta">{{ item.date }} · {{ item.source }} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8em; margin-left: 0.3em; opacity: 0.7;"></i></div>
+                        {% if item.image_url %}
+                        <div class="press-thumbnail">
+                            <img src="{{ item.image_url }}" alt="Press Thumbnail">
+                        </div>
+                        {% endif %}
+                        <div class="press-content">
+                            <h4 class="press-title">{{ item.title }}</h4>
+                            <div class="press-meta">{{ item.date }} · {{ item.source }} <i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                    style="font-size: 0.8em; margin-left: 0.3em; opacity: 0.7;"></i></div>
+                        </div>
                     </a>
                     {% endfor %}
+
+                    {% if old_press %}
+                    {% for item in old_press %}
+                    <a href="{{ item.link }}" class="press-item hidden-press-item" target="_blank">
+                        {% if item.image_url %}
+                        <div class="press-thumbnail">
+                            <img src="{{ item.image_url }}" alt="Press Thumbnail">
+                        </div>
+                        {% endif %}
+                        <div class="press-content">
+                            <h4 class="press-title">{{ item.title }}</h4>
+                            <div class="press-meta">{{ item.date }} · {{ item.source }} <i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                    style="font-size: 0.8em; margin-left: 0.3em; opacity: 0.7;"></i></div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                    {% endif %}
                 </div>
+                {% if old_press %}
+                <div class="show-more-container" style="text-align: left; margin-top: 0.5rem;">
+                    <button id="show-more-press-btn" class="show-more-text">Show More <i class="fa-solid fa-chevron-down"></i></button>
+                </div>
+                {% endif %}
             </section>
 
             <footer class="footer">
-                <p>&copy; 2026 {{ profile.name }}. Designed with minimalist aesthetics.</p>
+                <p>&copy; 2026 {{ profile.name }}.</p>
             </footer>
         </main>
     </div>

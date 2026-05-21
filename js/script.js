@@ -68,4 +68,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 4. Press "Show More" functionality
+    const showMorePressBtn = document.getElementById('show-more-press-btn');
+    if (showMorePressBtn) {
+        showMorePressBtn.addEventListener('click', () => {
+            const hiddenItems = document.querySelectorAll('.hidden-press-item');
+            
+            if (hiddenItems.length > 0) {
+                hiddenItems.forEach(item => {
+                    item.classList.remove('hidden-press-item');
+                    item.classList.add('visible-press-item');
+                });
+                showMorePressBtn.innerHTML = 'Show Less <i class="fa-solid fa-chevron-up"></i>';
+            } else {
+                const visibleItems = document.querySelectorAll('.visible-press-item');
+                visibleItems.forEach(item => {
+                    item.classList.remove('visible-press-item');
+                    item.classList.add('hidden-press-item');
+                });
+                showMorePressBtn.innerHTML = 'Show More <i class="fa-solid fa-chevron-down"></i>';
+            }
+        });
+    }
 });
