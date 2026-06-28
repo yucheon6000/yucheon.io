@@ -20,15 +20,15 @@ about:
 
 news:
   - date: "Jun 2026"
-    content: "Our paper 'Judging the Imitation Game' has been accepted as an auxiliary paper at <b>IEEE CoG 2026</b>."
+    content: "Our paper '<b>Judging the Imitation Game</b>' has been accepted as an auxiliary paper at <b>IEEE CoG 2026</b>."
   - date: "May 2026"
-    content: "Visiting <a href='https://danielarus.csail.mit.edu/' target='_blank'><b>Prof. Daniela Rus</b></a>'s lab at MIT CSAIL for 2 months for collaborative research discussions."
-  - date: "Jan 2026"
-    content: "Our paper 'PREFAB: PREFerence-based Affective Modeling for Low-Budget Self-Annotation' has been accepted to <b>ACM CHI 2026</b> (Honourable Mention)."
+    content: "I started a 2-month research visit at <a href='https://danielarus.csail.mit.edu/' target='_blank'><b>Prof. Daniela Rus</b></a>'s lab at MIT CSAIL for collaborative research discussions."
   - date: "Mar 2026"
     content: "Our team won <b>1st Place</b> in the <a href='https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025/winners' target='_blank'><b>Orak Game Agent Challenge 2025 (SLM Track)</b></a> hosted by Krafton."
+  - date: "Jan 2026"
+    content: "Our paper '<b>PREFAB</b>' has been accepted to <b>ACM CHI 2026</b> (Honourable Mention)."
   - date: "Sep 2025"
-    content: "Our paper 'A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation' was accepted to the <b>IROS 2025 Workshop</b> on Robotic Fine Manipulation."
+    content: "Our paper '<b>A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation</b>' has been accepted to the <b>IROS 2025 Workshop</b> on Robotic Fine Manipulation."
 
 publications:
   - year: "2026"

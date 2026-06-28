@@ -134,14 +134,17 @@
 
             <section id="news" class="section animate-on-scroll">
                 <h3 class="section-title">Latest News</h3>
+                {% for yr_group in news %}
+                <h4 class="news-year-heading">{{ yr_group.year }}</h4>
                 <ul class="news-list">
-                    {% for item in news %}
+                    {% for item in yr_group.entries %}
                     <li>
-                        <span class="date">{{ item.date }}</span>
+                        <span class="date">{{ item.month }}</span>
                         <div class="news-content">{{ item.content }}</div>
                     </li>
                     {% endfor %}
                 </ul>
+                {% endfor %}
             </section>
 
             <section id="publications" class="section animate-on-scroll">

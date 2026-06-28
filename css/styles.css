@@ -358,6 +358,21 @@ a {
 }
 
 /* Publications */
+.news-year-heading {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 2rem 0 1.25rem 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.35rem;
+    letter-spacing: 0.05em;
+}
+
+.news-year-heading:first-of-type {
+    margin-top: 0;
+}
+
 .pub-year-heading {
     font-family: var(--font-heading);
     font-size: 1.15rem;
