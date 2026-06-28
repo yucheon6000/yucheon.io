@@ -31,46 +31,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Intersection Observer for Scroll Animations
+    // 2. Intersection Observer for subtle fade-in
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Animate only once
-            }
+    if (animatedElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: '0px 0px -30px 0px'
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
 
-    animatedElements.forEach(el => observer.observe(el));
+        animatedElements.forEach(el => observer.observe(el));
+    }
 
     // 3. Active Nav Link Highlighting on Scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            // Add a little offset to trigger earlier
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
+    if (sections.length > 0 && navLinks.length > 0) {
+        const updateActiveNav = () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 160)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current) && current !== '') {
-                link.classList.add('active');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current) && current !== '') {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+        // Throttle scroll handler
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateActiveNav();
+                    ticking = false;
+                });
+                ticking = true;
             }
         });
-    });
+    }
 
     // 4. Press "Show More" functionality
     const showMorePressBtn = document.getElementById('show-more-press-btn');

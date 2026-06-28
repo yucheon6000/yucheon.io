@@ -1,7 +1,7 @@
 profile:
   name: "Yucheon Park"
   title: "Integrated M.S./Ph.D. Student"
-  affiliation: "<a href='https://cilab.gist.ac.kr/hp/' target='_blank'>Cognition & Intelligence Lab</a>,<br/>GIST"
+  affiliation: "<a href='https://cilab.gist.ac.kr/hp/' target='_blank'>Cognition & Intelligence Lab</a>,<br/>Gwangju Institute of Science and Technology"
   email: "yucheon6000@gm.gist.ac.kr"
   location: "Gwangju, South Korea"
   image_url: "https://avatars.githubusercontent.com/u/95568961?v=4"
@@ -14,9 +14,8 @@ profile:
 
 about:
   paragraphs:
-    - "Hello! I am an Integrated M.S./Ph.D. student at the Gwangju Institute of Science and Technology (GIST), working in the Cognition & Intelligence Lab under the supervision of Prof. Kyung-Joong Kim."
-    - "My research primarily focuses on <b>Game Artificial Intelligence</b> and <b>Affective Computing</b>. I am passionate about developing intelligent agents and creating interactive experiences that bridge the gap between human cognition and AI."
-    - "Previously, I earned a Bachelor's degree in Game Design and Business from Kongju National University."
+    - "Hello! I am an Integrated M.S./Ph.D. student at Gwangju Institute of Science and Technology (GIST), working in the Cognition & Intelligence Lab under the supervision of Prof. Kyung-Joong Kim."
+    - "My research focuses on <b>Game Artificial Intelligence</b> and <b>Affective Computing</b>. I am interested in applying AI widely across the gaming domain."
 
 news:
   - date: "Jun 2026"

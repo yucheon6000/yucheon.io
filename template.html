@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Basic SEO -->
-    <meta name="description" content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
-    <meta name="keywords" content="{{ profile.name }}, Academic Profile, Researcher, GIST, Artificial Intelligence, Game AI, Affective Computing">
+    <meta name="description"
+        content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
+    <meta name="keywords"
+        content="{{ profile.name }}, Academic Profile, Researcher, GIST, Artificial Intelligence, Game AI, Affective Computing">
     <meta name="author" content="{{ profile.name }}">
     <link rel="canonical" href="https://yucheon.io/">
     <title>{{ profile.name }} | Academic Profile</title>
@@ -15,14 +17,16 @@
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://yucheon.io/">
     <meta property="og:title" content="{{ profile.name }} | Academic Profile">
-    <meta property="og:description" content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
+    <meta property="og:description"
+        content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
     <meta property="og:image" content="{{ profile.image_url }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://yucheon.io/">
     <meta property="twitter:title" content="{{ profile.name }} | Academic Profile">
-    <meta property="twitter:description" content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
+    <meta property="twitter:description"
+        content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
     <meta property="twitter:image" content="{{ profile.image_url }}">
 
     <!-- Schema.org JSON-LD -->
@@ -46,19 +50,18 @@
       ]
     }
     </script>
-    
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./assets/favicon/site.webmanifest">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Inter for body, Outfit for headings -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
         rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -73,18 +76,19 @@
     </button>
     -->
 
-    <div class="layout-container">
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
-            <div class="profile-card">
-                <div class="profile-image">
-                    <img src="{{ profile.image_url }}" alt="{{ profile.name }}">
-                </div>
+    <div class="container">
+        <!-- Profile Hero -->
+        <header class="profile-hero">
+            <div class="profile-image">
+                <img src="{{ profile.image_url }}" alt="{{ profile.name }}">
+            </div>
+            <div class="profile-info">
                 <h1 class="name">{{ profile.name }}</h1>
-                <h2 class="title">{{ profile.title }}</h2>
+                <p class="title-line">{{ profile.title }}</p>
                 <p class="affiliation">{{ profile.affiliation }}</p>
-                <div class="contact-info">
+                <div class="contact-row">
                     <a href="mailto:{{ profile.email }}"><i class="fa-regular fa-envelope"></i> {{ profile.email }}</a>
+                    <span class="separator"></span>
                     <span class="location-text"><i class="fa-solid fa-location-dot"></i> {{ profile.location }}</span>
                 </div>
                 <div class="social-links">
@@ -93,49 +97,54 @@
                             class="fa-solid fa-graduation-cap"></i></a>
                     {% endif %}
                     {% if profile.social.github %}
-                    <a href="{{ profile.social.github }}" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    {% endif %}
-                    {% if profile.social.youtube %}
-                    <a href="{{ profile.social.youtube }}" aria-label="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                    {% endif %}
-                    {% if profile.social.twitter %}
-                    <a href="{{ profile.social.twitter }}" aria-label="Twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="{{ profile.social.github }}" aria-label="GitHub" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
                     {% endif %}
                     {% if profile.social.linkedin %}
                     <a href="{{ profile.social.linkedin }}" aria-label="LinkedIn" target="_blank"><i
                             class="fa-brands fa-linkedin-in"></i></a>
                     {% endif %}
-                </div>
-                <nav class="nav-menu">
-                    <a href="#about" class="nav-link active">About</a>
-                    <a href="#news" class="nav-link">News</a>
-                    <a href="#publications" class="nav-link">Publications</a>
-                    {% if projects %}
-                    <a href="#projects" class="nav-link">Projects</a>
+                    {% if profile.social.youtube %}
+                    <a href="{{ profile.social.youtube }}" aria-label="YouTube" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a>
                     {% endif %}
-                    <a href="#press" class="nav-link">Press</a>
-                </nav>
+                    {% if profile.social.twitter %}
+                    <a href="{{ profile.social.twitter }}" aria-label="Twitter" target="_blank"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    {% endif %}
+                </div>
             </div>
-        </aside>
+        </header>
 
-        <!-- Right Content -->
-        <main class="content">
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <a href="#about" class="nav-link active">About</a>
+            <a href="#news" class="nav-link">News</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            {% if projects %}
+            <a href="#projects" class="nav-link">Projects</a>
+            {% endif %}
+            <a href="#press" class="nav-link">Press</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
             <section id="about" class="section animate-on-scroll">
-                <h3 class="section-title">About Me</h3>
+                <h2 class="section-title">About</h2>
                 {% for paragraph in about.paragraphs %}
                 <p>{{ paragraph }}</p>
                 {% endfor %}
                 <!--
-                <div class="action-buttons">
+                <div class="action-buttons" style="margin-top: 1.25rem;">
                     <a href="{{ profile.cv_url }}" class="btn btn-primary" target="_blank"><i class="fa-solid fa-download"></i> Download CV</a>
                 </div>
                 -->
             </section>
 
             <section id="news" class="section animate-on-scroll">
-                <h3 class="section-title">Latest News</h3>
+                <h2 class="section-title">News</h2>
                 {% for yr_group in news %}
-                <h4 class="news-year-heading">{{ yr_group.year }}</h4>
+                <h3 class="news-year-heading">{{ yr_group.year }}</h3>
                 <ul class="news-list">
                     {% for item in yr_group.entries %}
                     <li>
@@ -148,10 +157,10 @@
             </section>
 
             <section id="publications" class="section animate-on-scroll">
-                <h3 class="section-title">Publications</h3>
+                <h2 class="section-title">Publications</h2>
 
                 {% for year, year_pubs in publications|groupby('year')|reverse %}
-                <h4 class="pub-year-heading">{{ year }}</h4>
+                <h3 class="pub-year-heading">{{ year }}</h3>
                 <div class="year-publications">
                     {% for pub in year_pubs %}
                     <div class="publication-item">
@@ -163,7 +172,7 @@
                             {% endif %}
                         </div>
                         <div class="pub-details">
-                            <h5 class="pub-title">{{ pub.title }}</h5>
+                            <h4 class="pub-title">{{ pub.title }}</h4>
                             <div class="pub-authors">{{ pub.authors | safe }}</div>
                             <div class="pub-venue">{{ pub.venue }}</div>
                             {% if pub.abstract %}
@@ -183,7 +192,7 @@
 
             {% if projects %}
             <section id="projects" class="section">
-                <h3 class="section-title">Projects</h3>
+                <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
                     {% for proj in projects %}
                     <div class="project-card">
@@ -200,7 +209,7 @@
             {% endif %}
 
             <section id="press" class="section animate-on-scroll">
-                <h3 class="section-title">Press & Media</h3>
+                <h2 class="section-title">Press & Media</h2>
                 <div class="press-list">
                     {% for item in press %}
                     <a href="{{ item.link }}" class="press-item" target="_blank">
@@ -213,7 +222,7 @@
                             <h4 class="press-title">{{ item.title }}</h4>
                             <div class="press-meta">{{ item.date }} · {{ item.source }} <i
                                     class="fa-solid fa-arrow-up-right-from-square"
-                                    style="font-size: 0.8em; margin-left: 0.3em; opacity: 0.7;"></i></div>
+                                    style="font-size: 0.75em; margin-left: 0.25em; opacity: 0.5;"></i></div>
                         </div>
                     </a>
                     {% endfor %}
@@ -230,23 +239,24 @@
                             <h4 class="press-title">{{ item.title }}</h4>
                             <div class="press-meta">{{ item.date }} · {{ item.source }} <i
                                     class="fa-solid fa-arrow-up-right-from-square"
-                                    style="font-size: 0.8em; margin-left: 0.3em; opacity: 0.7;"></i></div>
+                                    style="font-size: 0.75em; margin-left: 0.25em; opacity: 0.5;"></i></div>
                         </div>
                     </a>
                     {% endfor %}
                     {% endif %}
                 </div>
                 {% if old_press %}
-                <div class="show-more-container" style="text-align: left; margin-top: 0.5rem;">
-                    <button id="show-more-press-btn" class="show-more-text">Show More <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="show-more-container">
+                    <button id="show-more-press-btn" class="show-more-text">Show More <i
+                            class="fa-solid fa-chevron-down"></i></button>
                 </div>
                 {% endif %}
             </section>
-
-            <footer class="footer">
-                <p>&copy; 2026 {{ profile.name }}.</p>
-            </footer>
         </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 {{ profile.name }}.</p>
+        </footer>
     </div>
 
     <script src="js/script.js"></script>
