@@ -4,8 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Academic Profile of {{ profile.name }}">
+    <!-- Basic SEO -->
+    <meta name="description" content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
+    <meta name="keywords" content="{{ profile.name }}, Academic Profile, Researcher, GIST, Artificial Intelligence, Game AI, Affective Computing">
+    <meta name="author" content="{{ profile.name }}">
+    <link rel="canonical" href="https://yucheon.io/">
     <title>{{ profile.name }} | Academic Profile</title>
+
+    <!-- Open Graph / Facebook / LinkedIn / KakaoTalk -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://yucheon.io/">
+    <meta property="og:title" content="{{ profile.name }} | Academic Profile">
+    <meta property="og:description" content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
+    <meta property="og:image" content="{{ profile.image_url }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yucheon.io/">
+    <meta property="twitter:title" content="{{ profile.name }} | Academic Profile">
+    <meta property="twitter:description" content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
+    <meta property="twitter:image" content="{{ profile.image_url }}">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ profile.name }}",
+      "jobTitle": "{{ profile.title }}",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Gwangju Institute of Science and Technology (GIST)"
+      },
+      "url": "https://yucheon.io/",
+      "image": "{{ profile.image_url }}",
+      "sameAs": [
+        "{{ profile.social.google_scholar }}",
+        "{{ profile.social.github }}",
+        "{{ profile.social.linkedin }}",
+        "{{ profile.social.youtube }}"
+      ]
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
@@ -18,7 +58,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Inter for body, Outfit for headings -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,9 +67,11 @@
 
 <body>
     <!-- Dark Mode Toggle -->
+    <!--
     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
         <i class="fa-solid fa-moon"></i>
     </button>
+    -->
 
     <div class="layout-container">
         <!-- Left Sidebar -->

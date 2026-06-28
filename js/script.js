@@ -2,31 +2,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Dark Mode Toggle
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
-    const icon = themeToggle.querySelector('i');
 
-    // Check for saved theme or system preference
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-        html.setAttribute('data-theme', 'dark');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    }
+    if (themeToggle) {
+        const icon = themeToggle.querySelector('i');
 
-    themeToggle.addEventListener('click', () => {
-        if (html.getAttribute('data-theme') === 'dark') {
-            html.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        } else {
+        // Check for saved theme or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
             html.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
         }
-    });
+
+        themeToggle.addEventListener('click', () => {
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+    }
 
     // 2. Intersection Observer for Scroll Animations
     const animatedElements = document.querySelectorAll('.animate-on-scroll');

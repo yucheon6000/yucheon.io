@@ -16,8 +16,11 @@ about:
   paragraphs:
     - "Hello! I am an Integrated M.S./Ph.D. student at the Gwangju Institute of Science and Technology (GIST), working in the Cognition & Intelligence Lab under the supervision of Prof. Kyung-Joong Kim."
     - "My research primarily focuses on <b>Game Artificial Intelligence</b> and <b>Affective Computing</b>. I am passionate about developing intelligent agents and creating interactive experiences that bridge the gap between human cognition and AI."
+    - "Previously, I earned a Bachelor's degree in Game Design and Business from Kongju National University."
 
 news:
+  - date: "Jun 2026"
+    content: "Our paper 'Judging the Imitation Game' has been accepted as an auxiliary paper at <b>IEEE CoG 2026</b>."
   - date: "May 2026"
     content: "Visiting <a href='https://danielarus.csail.mit.edu/' target='_blank'><b>Prof. Daniela Rus</b></a>'s lab at MIT CSAIL for 2 months for collaborative research discussions."
   - date: "Jan 2026"
@@ -28,6 +31,15 @@ news:
     content: "Our paper 'A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation' was accepted to the <b>IROS 2025 Workshop</b> on Robotic Fine Manipulation."
 
 publications:
+  - year: "2026"
+    title: "Judging the Imitation Game: Exploring Creator Bias in VLM-Based PCG Level Evaluation"
+    authors: "<b>Yucheon Park</b>, Geum-Hwan Hwang, Kyung-Joong Kim"
+    venue: "IEEE Conference on Games (CoG) 2026 · Auxiliary Paper · Sep, 2026 (Accepted)"
+    image_url: "./assets/images/vlm-pcg-eval.jpg"
+    # links:
+      # - label: "Paper"
+      #   url: "https://dl.acm.org/doi/10.1145/3772318.3791702"
+
   - year: "2026"
     title: "PREFAB: PREFerence-based Affective Modeling for Low-Budget Self-Annotation"
     authors: "Jaeyoung Moon, Youjin Choi, <b>Yucheon Park</b>, David Melhart, Georgios N. Yannakakis, Kyung-Joong Kim"
