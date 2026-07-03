@@ -14,7 +14,7 @@ profile:
 
 about:
   paragraphs:
-    - "Hello! I am an Integrated M.S./Ph.D. student at Gwangju Institute of Science and Technology (GIST), working in the Cognition & Intelligence Lab under the supervision of Prof. Kyung-Joong Kim."
+    - "Hello! I am an Integrated M.S./Ph.D. student at Gwangju Institute of Science and Technology (GIST), working in the Cognition & Intelligence Lab under the supervision of Prof. Kyung-Joong Kim. Previously, I received my Bachelor's degree in Game Design and Business Administration from Kongju National University."
     - "My research focuses on <b>Game Artificial Intelligence</b> and <b>Affective Computing</b>. I am interested in applying AI widely across the gaming domain."
 
 news:
@@ -101,6 +101,12 @@ press:
     source: "The Dong-A Ilbo"
     link: "https://www.donga.com/news/Society/article/all/20260329/133628611/1"
     image_url: "https://dimg.donga.com/wps/NEWS/IMAGE/2026/03/29/133628621.1.jpg"
+  
+  - date: "Dec 2025"
+    title: "GIST Hosts \"Metamorph,\" an Interactive Digital Exhibition"
+    source: "Dong-A Easy Edu"
+    link: "https://edu.donga.com/news/articleView.html?idxno=100126"
+    image_url: "https://cdn.edu.donga.com/news/photo/202512/100126_163494_3840.jpg"
 
 old_press:
   - date: "Nov 2024"
@@ -110,7 +116,7 @@ old_press:
     image_url: "https://stqnq5ux4599.edge.naverncp.com/data2/content/image/2024/11/14/.cache/512/20241114501261.jpg"
   
   - date: "Nov 2024"
-    title: "“Come discover a variety of games!” Kongju National University’s Department of Game Design Graduation Exhibition to be held at G-STAR"
+    title: "\"Come discover a variety of games!\" Kongju National University’s Department of Game Design Graduation Exhibition to be held at G-STAR"
     source: "Game Donga"
     link: "https://game.donga.com/114538/"
     image_url: "https://game.donga.com/media/__sized__/images/2024/11/6/65f8ea52f580410e-thumbnail-1920x1080-70.jpg"
@@ -134,7 +140,7 @@ old_press:
     image_url: "https://image.zdnet.co.kr/2022/12/27/6b44919c1503d0a3757e8911f375e315.jpg"
   
   - date: "Nov 2020"
-    title: "“I Am a [Student]” Episode 6: I Feel the Warmth of the World"
+    title: "\"I Am a [Student]\" Episode 6: I Feel the Warmth of the World"
     source: "Bilibili Variety Youtube Channel"
     link: "https://youtu.be/h2k9Zcoujr0?si=2nSidzewDB90qrF9"
     image_url: "https://i3.ytimg.com/vi/fYSo9Eeel9Q/maxresdefault.jpg"
