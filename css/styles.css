@@ -25,7 +25,7 @@
 
     /* Sizing */
     --container-width: 820px;
-    --transition: 0.2s ease;
+    --transition: 0.15s ease;
 }
 
 /* Dark Mode Variables */
@@ -115,12 +115,12 @@ img {
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
-    border: 3px solid var(--border);
-    transition: border-color var(--transition);
+    box-shadow: 0 0 0 1px var(--border-light);
+    transition: box-shadow var(--transition);
 }
 
 .profile-image:hover {
-    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent);
 }
 
 .profile-image img {
@@ -136,12 +136,12 @@ img {
 
 .name {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--text);
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin-bottom: 0.3rem;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 0.35rem;
 }
 
 .title-line {
@@ -267,8 +267,8 @@ img {
     height: 1.5px;
     background-color: var(--accent);
     transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.25s ease;
+    transform-origin: left;
+    transition: transform 0.2s ease;
 }
 
 .nav-link:hover {
@@ -300,12 +300,13 @@ img {
 }
 
 .section-title {
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
     font-weight: 600;
-    color: var(--text);
-    letter-spacing: -0.015em;
-    margin-bottom: 1.25rem;
+    color: var(--text-light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
 
 .section p {
@@ -474,11 +475,28 @@ img {
     font-size: 0.84rem;
     margin-bottom: 0.15rem;
     line-height: 1.5;
+    transition: color var(--transition);
 }
 
-.pub-authors b {
+.publication-item:hover .pub-authors {
+    color: var(--text);
+}
+
+.pub-authors b,
+.pub-authors .pub-author-me {
     color: var(--text);
     font-weight: 600;
+}
+
+/* Linked author name — no underline, just color shift on hover */
+.pub-authors .pub-author-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.pub-authors .pub-author-link:hover {
+    color: var(--accent);
 }
 
 .pub-venue {

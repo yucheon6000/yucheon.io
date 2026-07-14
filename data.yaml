@@ -32,7 +32,10 @@ news:
 publications:
   - year: "2026"
     title: "Judging the Imitation Game: Exploring Creator Bias in VLM-Based PCG Level Evaluation"
-    authors: "<b>Yucheon Park</b>, Geum-Hwan Hwang, Kyung-Joong Kim"
+    authors:
+      - "@yucheon-park"
+      - "@geumhwan-hwang"
+      - "@kyung-joong-kim"
     venue: "IEEE Conference on Games (CoG) 2026 · Auxiliary Paper · Sep, 2026 (Accepted)"
     image_url: "./assets/images/vlm-pcg-eval.jpg"
     # links:
@@ -41,7 +44,13 @@ publications:
 
   - year: "2026"
     title: "PREFAB: PREFerence-based Affective Modeling for Low-Budget Self-Annotation"
-    authors: "Jaeyoung Moon, Youjin Choi, <b>Yucheon Park</b>, David Melhart, Georgios N. Yannakakis, Kyung-Joong Kim"
+    authors:
+      - "@jaeyoung-moon"
+      - "@youjin-choi"
+      - "@yucheon-park"
+      - "@david-melhart"
+      - "@georgios-yannakakis"
+      - "@kyung-joong-kim"
     venue: "ACM CHI 2026 (🏆 Honourable Mention Awarded) · Apr 13, 2026"
     image_url: "./assets/images/prefab.jpg"
     links:
@@ -50,7 +59,15 @@ publications:
   
   - year: "2025"
     title: "A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation"
-    authors: "Eunju Kwon, Seungwon Oh, In-Chang Baek, <b>Yucheon Park</b>, Gyungbo Kim, JaeYoung Moon, Yunho Choi, Kyung-Joong Kim"
+    authors:
+      - "@eunju-kwon"
+      - "@seungwon-oh"
+      - "@inchang-baek"
+      - "@yucheon-park"
+      - "@gyungbo-kim"
+      - "@jaeyoung-moon"
+      - "@yunho-choi"
+      - "@kyung-joong-kim"
     venue: "IROS 2025 Workshop on Robotic Fine Manipulation: Integrating Tactile, Visual, and Intelligent Control · Oct 20, 2025"
     image_url: "./assets/images/humanoid-tactile.jpg"
     links:
@@ -59,7 +76,9 @@ publications:
   
   - year: "2024"
     title: "A Study on the Development Method of Mobility AR Content Interacting with Environmental Objects in Autonomous Driving Situations"
-    authors: "<b>Yucheon Park</b>, Byungpyo Kyung"
+    authors:
+      - "@yucheon-park"
+      - "@byungpyo-kyung"
     venue: "Korean Institute of Smart Media (2024 Fall Academic Conference) · Oct 12, 2024"
     image_url: "./assets/images/mobility-ar.jpg"
     links:
@@ -70,7 +89,13 @@ publications:
   
   - year: "2023"
     title: "A Proposal for a Novel Input-Output Approach in Interactive Media Games: A Study on Shadow Detection Technology"
-    authors: "<b>Yucheon Park</b>, Yejin Kang, Geunyeong Park, Yoonwoo Jang, Dasom Jung, Byungpyo Kyung"
+    authors:
+      - "@yucheon-park"
+      - "@yejin-kang"
+      - "@geunyeong-park"
+      - "@yoonwoo-jang"
+      - "@dasom-jung"
+      - "@byungpyo-kyung"
     venue: "Korea Game Society (2023 Spring Academic Conference) · Jun 3, 2023"
     image_url: "./assets/images/shadow.jpg"
     links:

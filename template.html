@@ -173,7 +173,22 @@
                         </div>
                         <div class="pub-details">
                             <h4 class="pub-title">{{ pub.title }}</h4>
-                            <div class="pub-authors">{{ pub.authors | safe }}</div>
+                            <div class="pub-authors">
+                                {%- if pub.authors is string -%}
+                                    {{ pub.authors | safe }}
+                                {%- else -%}
+                                    {%- for author in pub.authors -%}
+                                        {%- if author.url -%}
+                                            <a href="{{ author.url }}" target="_blank" class="pub-author-link {% if author.me %}pub-author-me{% endif %}">{{ author.name }}</a>
+                                        {%- elif author.me -%}
+                                            <b>{{ author.name }}</b>
+                                        {%- else -%}
+                                            <span>{{ author.name }}</span>
+                                        {%- endif -%}
+                                        {%- if not loop.last %}, {% endif -%}
+                                    {%- endfor -%}
+                                {%- endif -%}
+                            </div>
                             <div class="pub-venue">{{ pub.venue }}</div>
                             {% if pub.abstract %}
                             <p class="pub-abstract">{{ pub.abstract }}</p>

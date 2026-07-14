@@ -1,0 +1,74 @@
+# ============================================================
+# Author Pool — define each person once, reference with @id
+# Usage in data.yaml: - "@firstname-lastname"
+# ============================================================
+
+yucheon-park:
+  name: "Yucheon Park"
+  me: true
+
+# GIST
+kyung-joong-kim:
+  name: "Kyung-Joong Kim"
+  url: "https://cilab.gist.ac.kr/hp/people/"
+
+jaeyoung-moon:
+  name: "Jaeyoung Moon"
+  url: "https://scholar.google.com/citations?user=ZOXP7skAAAAJ"
+
+youjin-choi:
+  name: "Youjin Choi"
+  url: "https://scholar.google.com/citations?user=zEPv1XQAAAAJ"
+
+geumhwan-hwang:
+  name: "Geum-Hwan Hwang"
+  url: "https://kr.linkedin.com/in/geumhwan-hwang-a22930378"
+
+david-melhart:
+  name: "David Melhart"
+  url: "https://davidmelhart.com/"
+
+georgios-yannakakis:
+  name: "Georgios N. Yannakakis"
+  url: "https://yannakakis.net/"
+
+eunju-kwon:
+  name: "Eunju Kwon"
+  url: "https://eunjuyummy.github.io/"
+
+seungwon-oh:
+  name: "Seungwon Oh"
+  url: "https://scholar.google.com/citations?user=aFgeYz0AAAAJ"
+
+inchang-baek:
+  name: "In-Chang Baek"
+  url: "https://inchang.dev/"
+
+gyungbo-kim:
+  name: "Gyungbo Kim"
+  url: "https://scholar.google.com/citations?user=iRDX78sAAAAJ"
+
+yunho-choi:
+  name: "Yunho Choi"
+  url: "https://youjinchois.notion.site/"
+
+# KNU
+byungpyo-kyung:
+  name: "Byungpyo Kyung"
+  url: "https://scholar.google.com/citations?user=A09YA2MAAAAJ"
+
+yejin-kang:
+  name: "Yejin Kang"
+  url: "https://solid-chocolate-1a5.notion.site/b5dfc69bf6314cfda28f3031aae6b045"
+
+geunyeong-park:
+  name: "Geunyeong Park"
+  url: "https://kr.linkedin.com/in/geunyeongpark"
+
+yoonwoo-jang:
+  name: "Yoonwoo Jang"
+  url: "https://animated-meerkat-71f.notion.site/Jang-Yoon-Woo-2141398153964c5fadc7368903fc9651"
+
+dasom-jung:
+  name: "Dasom Jung"
+  url: "https://dasom0108.notion.site/a102dc6858ae44bd93cb9946f598f473?pvs=74"
