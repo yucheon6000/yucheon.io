@@ -2,20 +2,38 @@
 <html lang="en">
 
 <head>
+    {% if profile.google_analytics_id %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ profile.google_analytics_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ profile.google_analytics_id }}');
+    </script>
+    {% endif %}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Basic SEO -->
     <meta name="description"
         content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
+    {% if site.keywords %}
     <meta name="keywords"
-        content="{{ profile.name }}, Academic Profile, Researcher, GIST, Artificial Intelligence, Game AI, Affective Computing">
+        content="{{ profile.name }}, {{ site.keywords }}">
+    {% endif %}
     <meta name="author" content="{{ profile.name }}">
-    <link rel="canonical" href="https://yucheon.io/">
+    {% if site.url %}
+    <link rel="canonical" href="{{ site.url }}">
+    {% endif %}
     <title>{{ profile.name }} | Academic Profile</title>
 
     <!-- Open Graph / Facebook / LinkedIn / KakaoTalk -->
     <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://yucheon.io/">
+    {% if site.url %}
+    <meta property="og:url" content="{{ site.url }}">
+    {% endif %}
     <meta property="og:title" content="{{ profile.name }} | Academic Profile">
     <meta property="og:description"
         content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
@@ -23,7 +41,9 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yucheon.io/">
+    {% if site.url %}
+    <meta property="twitter:url" content="{{ site.url }}">
+    {% endif %}
     <meta property="twitter:title" content="{{ profile.name }} | Academic Profile">
     <meta property="twitter:description"
         content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
@@ -38,9 +58,9 @@
       "jobTitle": "{{ profile.title }}",
       "affiliation": {
         "@type": "Organization",
-        "name": "Gwangju Institute of Science and Technology (GIST)"
+        "name": "{{ site.organization }}"
       },
-      "url": "https://yucheon.io/",
+      "url": "{{ site.url }}",
       "image": "{{ profile.image_url }}",
       "sameAs": [
         "{{ profile.social.google_scholar }}",
@@ -154,6 +174,10 @@
                     {% endfor %}
                 </ul>
                 {% endfor %}
+                <div class="show-more-container" style="margin-top: 1rem;">
+                    <button id="show-more-news-btn" class="show-more-text">Show More <i
+                            class="fa-solid fa-chevron-down"></i></button>
+                </div>
             </section>
 
             <section id="publications" class="section animate-on-scroll">
@@ -270,7 +294,7 @@
         </main>
 
         <footer class="footer">
-            <p>&copy; 2026 {{ profile.name }}.</p>
+            <p>&copy; {{ site.copyright_year | default(2026) }} {{ profile.name }}.</p>
         </footer>
     </div>
 

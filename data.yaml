@@ -1,3 +1,9 @@
+site:
+  url: "https://yucheon.io/"
+  organization: "Gwangju Institute of Science and Technology (GIST)"
+  keywords: "Academic Profile, Researcher, GIST, Artificial Intelligence, Game AI, Affective Computing"
+  copyright_year: "2026"
+
 profile:
   name: "Yucheon Park"
   title: "Integrated M.S./Ph.D. Student"
@@ -6,6 +12,7 @@ profile:
   location: "Gwangju, South Korea"
   image_url: "https://avatars.githubusercontent.com/u/95568961?v=4"
   cv_url: "assets/cv/cv.pdf"
+  google_analytics_id: "G-6MWN7J2RWQ"
   social:
     google_scholar: "https://scholar.google.com/citations?user=YNZB8MMAAAAJ&hl=en"
     github: "https://github.com/yucheon6000"
@@ -18,6 +25,8 @@ about:
     - "My research focuses on <b>Game Artificial Intelligence</b> and <b>Affective Computing</b>. I am interested in applying AI widely across the gaming domain."
 
 news:
+  - date: "Jul 2026"
+    content: "I will be joining the <a href='https://s3d.cmu.edu/' target='_blank'><b>Software and Societal Systems Department</b></a> at <b>Carnegie Mellon University</b> as a visiting student from August 2026 to February 2027, funded by <b>IITP</b>."
   - date: "Jun 2026"
     content: "Our paper '<b>Judging the Imitation Game</b>' has been accepted as an auxiliary paper at <b>IEEE CoG 2026</b>."
   - date: "May 2026"

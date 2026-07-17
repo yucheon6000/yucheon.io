@@ -77,11 +77,12 @@ def build():
         f.write(output_html)
 
     print("Generating sitemap.xml...")
+    site_url = data.get('site', {}).get('url', 'https://yucheon.io/')
     today = datetime.now().strftime("%Y-%m-%d")
     sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://yucheon.io/</loc>
+        <loc>{site_url}</loc>
         <lastmod>{today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
