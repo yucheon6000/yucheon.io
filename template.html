@@ -252,13 +252,26 @@
                 <div class="press-list">
                     {% for item in press %}
                     <a href="{{ item.link }}" class="press-item" target="_blank">
-                        {% if item.image_url %}
                         <div class="press-thumbnail">
+                            {% if item.image_url %}
                             <img src="{{ item.image_url }}" alt="Press Thumbnail">
+                            {% else %}
+                            <div class="press-thumbnail-placeholder">
+                                {% if item.type == 'Video' %}
+                                <i class="fa-solid fa-video"></i>
+                                {% else %}
+                                <i class="fa-regular fa-newspaper"></i>
+                                {% endif %}
+                            </div>
+                            {% endif %}
                         </div>
-                        {% endif %}
                         <div class="press-content">
-                            <h4 class="press-title">{{ item.title }}</h4>
+                            <h4 class="press-title">
+                                {%- if item.type -%}
+                                <span class="press-badge press-badge-{{ item.type | lower }}">{{ item.type }}</span>
+                                {%- endif -%}
+                                {{ item.title }}
+                            </h4>
                             <div class="press-meta">{{ item.date }} · {{ item.source }} <i
                                     class="fa-solid fa-arrow-up-right-from-square"
                                     style="font-size: 0.75em; margin-left: 0.25em; opacity: 0.5;"></i></div>
@@ -269,13 +282,26 @@
                     {% if old_press %}
                     {% for item in old_press %}
                     <a href="{{ item.link }}" class="press-item hidden-press-item" target="_blank">
-                        {% if item.image_url %}
                         <div class="press-thumbnail">
+                            {% if item.image_url %}
                             <img src="{{ item.image_url }}" alt="Press Thumbnail">
+                            {% else %}
+                            <div class="press-thumbnail-placeholder">
+                                {% if item.type == 'Video' %}
+                                <i class="fa-solid fa-video"></i>
+                                {% else %}
+                                <i class="fa-regular fa-newspaper"></i>
+                                {% endif %}
+                            </div>
+                            {% endif %}
                         </div>
-                        {% endif %}
                         <div class="press-content">
-                            <h4 class="press-title">{{ item.title }}</h4>
+                            <h4 class="press-title">
+                                {%- if item.type -%}
+                                <span class="press-badge press-badge-{{ item.type | lower }}">{{ item.type }}</span>
+                                {%- endif -%}
+                                {{ item.title }}
+                            </h4>
                             <div class="press-meta">{{ item.date }} · {{ item.source }} <i
                                     class="fa-solid fa-arrow-up-right-from-square"
                                     style="font-size: 0.75em; margin-left: 0.25em; opacity: 0.5;"></i></div>

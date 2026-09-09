@@ -20,6 +20,8 @@ def resolve_authors(authors, people_pool):
                 # Unknown id — show as plain text so nothing silently disappears
                 print(f"  WARNING: @{key} not found in people pool")
                 resolved.append({'name': f'@{key}'})
+        elif isinstance(entry, str):
+            resolved.append({'name': entry})
         else:
             resolved.append(entry)  # already an inline dict
     return resolved

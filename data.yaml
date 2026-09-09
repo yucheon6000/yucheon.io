@@ -25,6 +25,8 @@ about:
     - "My research focuses on <b>Game Artificial Intelligence</b> and <b>Affective Computing</b>. I am interested in applying AI widely across the gaming domain."
 
 news:
+  - date: "Sep 2026"
+    content: "Our paper '<b>Whirling Wishes</b>' has been accepted as a poster at <b>ACM SIGGRAPH Asia 2026</b>."
   - date: "Jul 2026"
     content: "I will be joining the <a href='https://s3d.cmu.edu/' target='_blank'><b>Software and Societal Systems Department</b></a> at <b>Carnegie Mellon University</b> as a visiting student from August 2026 to February 2027, funded by <b>IITP</b>."
   - date: "Jun 2026"
@@ -39,6 +41,35 @@ news:
     content: "Our paper '<b>A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation</b>' has been accepted to the <b>IROS 2025 Workshop</b> on Robotic Fine Manipulation."
 
 publications:
+  - year: "2026"
+    title: "Whirling Wishes: A Paper-and-Breath Interactive Media Installation for Hospital Waiting Spaces"
+    authors:
+      - "@yucheon-park"
+      - "Younsung Lee"
+      - "Sung-Hyun Kim"
+      - "@eunju-kwon"
+      - "@eunsung-song"
+      - "@kyung-joong-kim"
+    venue: "ACM SIGGRAPH Asia 2026 · Poster · Dec, 2026 (Accepted)"
+    image_url: "./assets/images/whirling-wishes.jpg"
+    # links:
+    #   - label: "Paper"
+    #     url: ""
+
+  - year: "2026"
+    title: "Sole-Interact: A High-Resolution Plantar Pressure Sensing System as a Software-DefinedInput Modality"
+    authors:
+      - "@ecehan-akan"
+      - "@yunho-choi"
+      - "@isaac-han"
+      - "@yucheon-park"
+      - "@kyung-joong-kim"
+    venue: "Under Review"
+    image_url: "./assets/images/insole.jpg"
+    links:
+      - label: "Paper"
+        url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7199183"
+
   - year: "2026"
     title: "Judging the Imitation Game: Exploring Creator Bias in VLM-Based PCG Level Evaluation"
     authors:
@@ -129,18 +160,21 @@ press:
     source: "Aju Business Daily"
     link: "https://www.ajunews.com/view/20260419123309735"
     image_url: "https://image.ajunews.com/content/image/2026/04/19/20260419123717282915.jpg"
+    type: "News"
 
   - date: "Mar 2026"
     title: "GIST Graduate Student Team Wins International AI Game Competition"
     source: "The Dong-A Ilbo"
     link: "https://www.donga.com/news/Society/article/all/20260329/133628611/1"
     image_url: "https://dimg.donga.com/wps/NEWS/IMAGE/2026/03/29/133628621.1.jpg"
+    type: "News"
   
   - date: "Dec 2025"
     title: "GIST Hosts \"Metamorph,\" an Interactive Digital Exhibition"
     source: "Dong-A Easy Edu"
     link: "https://edu.donga.com/news/articleView.html?idxno=100126"
     image_url: "https://cdn.edu.donga.com/news/photo/202512/100126_163494_3840.jpg"
+    type: "News"
 
 old_press:
   - date: "Nov 2024"
@@ -148,41 +182,48 @@ old_press:
     source: "Bridge Economy"
     link: "https://www.viva100.com/article/20241114501264"
     image_url: "https://stqnq5ux4599.edge.naverncp.com/data2/content/image/2024/11/14/.cache/512/20241114501261.jpg"
+    type: "News"
   
   - date: "Nov 2024"
     title: "\"Come discover a variety of games!\" Kongju National University’s Department of Game Design Graduation Exhibition to be held at G-STAR"
     source: "Game Donga"
     link: "https://game.donga.com/114538/"
     image_url: "https://game.donga.com/media/__sized__/images/2024/11/6/65f8ea52f580410e-thumbnail-1920x1080-70.jpg"
+    type: "News"
     
   - date: "May 2024"
     title: "ICT Mentoring Program Has Produced 70,000 Mentees Over 20 Years, Receiving High Praise from Participants… Hopes It Will Continue to Grow and Contribute to the Development of Digital Talent"
     source: "Electronic Times"
     link: "https://www.etnews.com/20240526000047"
     image_url: "https://img.etnews.com/news/article/2024/05/26/news-p.v1.20240526.485a5d4a975946bc880fb939ccfc887d_P1.jpg"
+    type: "News"
   
   - date: "Mar 2023"
     title: "I'm Revealing the Secrets Behind Winning a Minister's Award as a College Student... The Ultimate Guide to Extracurricular Activities | ⭐ A Must-Watch for College Students"
     source: "IT's okay YouTube Channel"
     link: "https://youtu.be/VGkL29jGhhw?si=j27neG7sub0wk-Vl"
     image_url: "https://i3.ytimg.com/vi/VGkL29jGhhw/maxresdefault.jpg"
+    type: "Video"
   
   - date: "Dec 2022"
     title: "'2022 ICT Mentoring' Concludes Successfully... ENTER, Spingle, and 100 Take Home Top Prizes"
     source: "ZDNET Korea"
     link: "https://zdnet.co.kr/view/?no=20221227082215"
     image_url: "https://image.zdnet.co.kr/2022/12/27/6b44919c1503d0a3757e8911f375e315.jpg"
+    type: "News"
   
   - date: "Nov 2020"
     title: "\"I Am a [Student]\" Episode 6: I Feel the Warmth of the World"
     source: "Bilibili Variety Youtube Channel"
     link: "https://youtu.be/h2k9Zcoujr0?si=2nSidzewDB90qrF9"
     image_url: "https://i3.ytimg.com/vi/fYSo9Eeel9Q/maxresdefault.jpg"
+    type: "Video"
 
   - date: "Jul 2019"
     title: "Kongju National University Wins Gold Award at the '2019 International College Student Game Development Competition'"
     source: "Baekje News"
     link: "https://www.ebaekje.co.kr/news/articleView.html?idxno=82788"
+    type: "News"
     # image_url: "https://image.zdnet.co.kr/2022/12/27/6b44919c1503d0a3757e8911f375e315.jpg"
 
   
