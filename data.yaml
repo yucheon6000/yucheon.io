@@ -56,19 +56,19 @@ publications:
     #   - label: "Paper"
     #     url: ""
 
-  - year: "2026"
-    title: "Sole-Interact: A High-Resolution Plantar Pressure Sensing System as a Software-DefinedInput Modality"
-    authors:
-      - "@ecehan-akan"
-      - "@yunho-choi"
-      - "@isaac-han"
-      - "@yucheon-park"
-      - "@kyung-joong-kim"
-    venue: "Under Review"
-    image_url: "./assets/images/insole.jpg"
-    links:
-      - label: "Paper"
-        url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7199183"
+  # - year: "2026"
+  #   title: "Sole-Interact: A High-Resolution Plantar Pressure Sensing System as a Software-DefinedInput Modality"
+  #   authors:
+  #     - "@ecehan-akan"
+  #     - "@yunho-choi"
+  #     - "@isaac-han"
+  #     - "@yucheon-park"
+  #     - "@kyung-joong-kim"
+  #   venue: "Under Review"
+  #   image_url: "./assets/images/insole.jpg"
+  #   links:
+  #     - label: "Paper"
+  #       url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7199183"
 
   - year: "2026"
     title: "Judging the Imitation Game: Exploring Creator Bias in VLM-Based PCG Level Evaluation"
