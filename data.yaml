@@ -52,9 +52,11 @@ publications:
       - "@kyung-joong-kim"
     venue: "ACM SIGGRAPH Asia 2026 · Poster · Dec, 2026 (Accepted)"
     image_url: "./assets/images/whirling-wishes.jpg"
-    # links:
-    #   - label: "Paper"
-    #     url: ""
+    links:
+      - label: "Paper"
+        url: "./assets/pdf/SIGGRAGH Asia 2026 Paper.pdf"
+      - label: "Poster"
+        url: "./assets/pdf/SIGGRAGH Asia 2026 Poster.pdf"
 
   # - year: "2026"
   #   title: "Sole-Interact: A High-Resolution Plantar Pressure Sensing System as a Software-DefinedInput Modality"
@@ -78,9 +80,9 @@ publications:
       - "@kyung-joong-kim"
     venue: "IEEE Conference on Games (CoG) 2026 · Auxiliary Paper · Sep, 2026 (Accepted)"
     image_url: "./assets/images/vlm-pcg-eval.jpg"
-    # links:
-      # - label: "Paper"
-      #   url: "https://dl.acm.org/doi/10.1145/3772318.3791702"
+    links:
+      - label: "Presentation"
+        url: "./assets/pdf/CoG 2026 Presentation.pdf"
 
   - year: "2026"
     title: "PREFAB: PREFerence-based Affective Modeling for Low-Budget Self-Annotation"
