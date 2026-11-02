@@ -28,7 +28,7 @@
       font-family: "Source Serif 4", "Computer Modern Serif", "Latin Modern Roman", "Times New Roman", Times, serif;
       background-color: #f1f3f5;
       color: #000;
-      line-height: 1.33;
+      line-height: 1.35;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -56,7 +56,7 @@
       z-index: 1000;
       background: #1e293b;
       color: #f8fafc;
-      padding: 9px 20px;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -148,38 +148,37 @@
 
     /* Page Container */
     .page-container {
+      padding: 24px 0 60px 0;
       display: flex;
       justify-content: center;
-      padding: 24px 12px;
     }
 
     .page {
       background: #ffffff;
       width: 210mm;
       min-height: 297mm;
-      padding: 9mm 13mm;
+      padding: 14mm 16mm;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
-      font-size: 10pt;
+      font-size: 11pt;
     }
 
     /* LaTeX Heading */
     .header {
       text-align: center;
-      margin-bottom: 6pt;
+      margin-bottom: 12pt;
     }
 
     .name {
-      font-size: 20.5pt;
+      font-size: 22pt;
       font-weight: bold;
       font-variant: small-caps;
       letter-spacing: 0.5px;
-      margin-bottom: 2pt;
+      margin-bottom: 3pt;
     }
 
     .contact-info {
-      font-size: 9.1pt;
+      font-size: 9.5pt;
       color: #111;
-      line-height: 1.32;
     }
 
     .contact-info a {
@@ -188,10 +187,10 @@
     }
 
     .research-interests {
-      margin-top: 3pt;
-      font-size: 9pt;
+      margin-top: 4pt;
+      font-size: 9.5pt;
       color: #222;
-      line-height: 1.28;
+      line-height: 1.32;
     }
 
     .research-interests strong {
@@ -200,29 +199,29 @@
     }
 
     .sep {
-      margin: 0 3pt;
-      color: #555;
+      margin: 0 3.5pt;
+      color: #444;
     }
 
     /* LaTeX Section */
     .section {
-      margin-top: 6pt;
-      margin-bottom: 2pt;
+      margin-top: 9pt;
+      margin-bottom: 4pt;
     }
 
     .section-title {
-      font-size: 11.2pt;
+      font-size: 12.5pt;
       font-weight: bold;
       font-variant: small-caps;
       border-bottom: 1px solid #000;
-      padding-bottom: 1pt;
-      margin-bottom: 3pt;
+      padding-bottom: 1.5pt;
+      margin-bottom: 5pt;
       letter-spacing: 0.3px;
     }
 
     /* Entry Rows */
     .entry {
-      margin-bottom: 3pt;
+      margin-bottom: 5pt;
       break-inside: avoid;
       page-break-inside: avoid;
     }
@@ -231,13 +230,13 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 9.4pt;
+      font-size: 10pt;
     }
 
     .entry-left-1 {
       font-weight: normal;
       flex: 1;
-      padding-right: 10pt;
+      padding-right: 12pt;
     }
 
     .entry-left-1 strong {
@@ -247,22 +246,22 @@
     .entry-right-1 {
       white-space: nowrap;
       text-align: right;
-      font-size: 9.1pt;
+      font-size: 10pt;
     }
 
     .entry-row-2 {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 8.7pt;
+      font-size: 9pt;
       font-style: italic;
       color: #111;
-      margin-top: 0.5pt;
+      margin-top: 1pt;
     }
 
     .entry-left-2 {
       flex: 1;
-      padding-right: 10pt;
+      padding-right: 12pt;
     }
 
     .entry-right-2 {
@@ -272,18 +271,18 @@
 
     /* Award specific rows */
     .award-competition {
-      font-size: 9.1pt;
+      font-size: 10pt;
       font-style: italic;
       color: #000;
-      margin-top: 0.5pt;
-      line-height: 1.25;
+      margin-top: 1pt;
+      line-height: 1.32;
     }
 
     .award-issuer {
-      font-size: 8.2pt;
+      font-size: 8.5pt;
       font-style: italic;
       color: #222;
-      margin-top: 0.5pt;
+      margin-top: 1pt;
     }
 
     .indent {
@@ -293,31 +292,31 @@
     /* Bullets */
     .bullet-list {
       list-style-type: disc;
-      margin: 1pt 0 1.5pt 14pt;
+      margin: 2pt 0 3pt 18pt;
       padding: 0;
-      font-size: 8.8pt;
+      font-size: 9.5pt;
     }
 
     .bullet-item {
-      margin-bottom: 0.8pt;
-      line-height: 1.25;
+      margin-bottom: 1.5pt;
+      line-height: 1.32;
     }
 
     /* Skills Grid */
     .skills-grid {
-      font-size: 9pt;
-      line-height: 1.3;
-      margin-top: 1.5pt;
+      font-size: 9.5pt;
+      line-height: 1.35;
+      margin-top: 2pt;
     }
 
     .skill-row {
-      margin-bottom: 1.5pt;
+      margin-bottom: 2pt;
       display: flex;
     }
 
     .skill-category {
       font-weight: bold;
-      min-width: 140px;
+      min-width: 145px;
       color: #000;
       padding-right: 6pt;
     }
@@ -366,7 +365,7 @@
 
       @page {
         size: A4;
-        margin: 8.5mm 12.5mm;
+        margin: 12mm 15mm;
       }
 
       .entry,
@@ -497,7 +496,7 @@
 
       <!-- EXPERIENCE -->
       <section class="section">
-        <h2 class="section-title">Research &amp; Work Experience</h2>
+        <h2 class="section-title">Experience</h2>
         {% for exp in experience %}
         <div class="entry">
           <div class="entry-row-1">
@@ -519,9 +518,9 @@
         {% endfor %}
       </section>
 
-      <!-- SELECTED PROJECTS -->
+      <!-- PROJECTS -->
       <section class="section">
-        <h2 class="section-title">Selected Projects</h2>
+        <h2 class="section-title">Projects</h2>
         {% for proj in projects %}
         <div class="entry">
           <div class="entry-row-1">
