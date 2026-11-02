@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ profile.name }} - Curriculum Vitae</title>
+  <!-- Academic Fonts: Source Serif 4 (Clean Modern Italic), EB Garamond, Libre Baskerville, Computer Modern -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/font/Serif/cmun-serif.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+  <style>
+    /* Reset & Base */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Source Serif 4", "Computer Modern Serif", "Latin Modern Roman", "Times New Roman", Times, serif;
+      background-color: #f1f3f5;
+      color: #000;
+      line-height: 1.35;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Font Themes selectable from toolbar */
+    body.font-source-serif {
+      font-family: "Source Serif 4", "Times New Roman", Times, serif;
+    }
+
+    body.font-garamond {
+      font-family: "EB Garamond", "Garamond", "Times New Roman", Times, serif;
+    }
+
+    body.font-baskerville {
+      font-family: "Libre Baskerville", "Baskerville", "Times New Roman", Times, serif;
+    }
+
+    body.font-cm {
+      font-family: "Computer Modern Serif", "Latin Modern Roman", "Times New Roman", Times, serif;
+    }
+
+    /* Screen Toolbar */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+    }
+
+    .toolbar-title {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toolbar-badge {
+      background: #3b82f6;
+      color: white;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .font-selector-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .font-select {
+      background: #334155;
+      color: #ffffff;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      outline: none;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .font-select:hover {
+      background: #475569;
+      border-color: #64748b;
+    }
+
+    .toolbar-tip {
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .btn-print {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-download {
+      background: #059669;
+      color: white;
+      text-decoration: none;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s ease;
+    }
+
+    .btn-download:hover {
+      background: #047857;
+    }
+
+    /* A4 Paper Container */
+    .page-container {
+      padding: 24px 0 60px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      background: #ffffff;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 14mm 16mm;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+      font-size: 11pt;
+    }
+
+    /* LaTeX Heading */
+    .header {
+      text-align: center;
+      margin-bottom: 12pt;
+    }
+
+    .name {
+      font-size: 22pt;
+      font-weight: bold;
+      font-variant: small-caps;
+      letter-spacing: 0.5px;
+      margin-bottom: 3pt;
+    }
+
+    .contact-info {
+      font-size: 9.5pt;
+      color: #111;
+    }
+
+    .contact-info a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .sep {
+      margin: 0 3.5pt;
+      color: #444;
+    }
+
+    /* LaTeX Section */
+    .section {
+      margin-top: 9pt;
+      margin-bottom: 4pt;
+    }
+
+    .section-title {
+      font-size: 12.5pt;
+      font-weight: bold;
+      font-variant: small-caps;
+      border-bottom: 1px solid #000;
+      padding-bottom: 1.5pt;
+      margin-bottom: 5pt;
+      letter-spacing: 0.3px;
+    }
+
+    /* Entry Rows */
+    .entry {
+      margin-bottom: 5pt;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .entry-row-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 10pt;
+    }
+
+    .entry-left-1 {
+      font-weight: normal;
+      flex: 1;
+      padding-right: 12pt;
+    }
+
+    .entry-left-1 strong {
+      font-weight: bold;
+    }
+
+    .entry-right-1 {
+      white-space: nowrap;
+      text-align: right;
+      font-size: 10pt;
+    }
+
+    .entry-row-2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9pt;
+      font-style: italic;
+      color: #111;
+      margin-top: 1pt;
+    }
+
+    .entry-left-2 {
+      flex: 1;
+      padding-right: 12pt;
+    }
+
+    .entry-right-2 {
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .entry-row-3 {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #222;
+      margin-top: 1pt;
+    }
+
+    /* Award specific rows: keep competition font size at 10pt when broken */
+    .award-competition {
+      font-size: 10pt;
+      font-style: italic;
+      color: #000;
+      margin-top: 1pt;
+      line-height: 1.32;
+    }
+
+    .award-issuer {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #222;
+      margin-top: 1pt;
+    }
+
+    /* Indent for sub-rows (LaTeX \quad) */
+    .indent {
+      /* padding-left: 1.25em; */
+    }
+
+    /* Bullets */
+    .bullet-list {
+      list-style-type: disc;
+      margin: 2pt 0 3pt 18pt;
+      padding: 0;
+      font-size: 9.5pt;
+    }
+
+    .bullet-item {
+      margin-bottom: 1.5pt;
+      line-height: 1.32;
+    }
+
+    /* Print Styles */
+    @media print {
+
+      html,
+      body {
+        background: #ffffff !important;
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .page-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+      }
+
+      .page {
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      @page {
+        size: A4;
+        margin: 12mm 15mm;
+      }
+
+      /* Prevent page breaks inside entries */
+      .entry,
+      .section-title {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      a {
+        text-decoration: underline;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Screen Toolbar -->
+  <header class="toolbar no-print">
+    <div class="toolbar-title">
+      <span>📄 {{ profile.name }} — CV Renderer</span>
+      <span class="toolbar-badge">A4 PDF Ready</span>
+    </div>
+    <div class="toolbar-actions">
+      <div class="font-selector-wrap">
+        <label for="fontSelect">✍️ 폰트 / 이탤릭 스타일:</label>
+        <select id="fontSelect" class="font-select" onchange="changeFont(this.value)">
+          <option value="font-source-serif" selected>Source Serif 4 (추천 · 가장 깔끔)</option>
+          <option value="font-garamond">EB Garamond (우아한 클래식 학술체)</option>
+          <option value="font-baskerville">Libre Baskerville (또렷한 가독성)</option>
+          <option value="font-cm">Computer Modern (LaTeX 기본값)</option>
+        </select>
+      </div>
+      <a href="cv.pdf" download="Yucheon_Park_CV.pdf" class="btn-download" title="헤더/URL 없이 사전 렌더링된 완벽한 A4 PDF 파일 다운로드">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        PDF 다운로드
+      </a>
+      <button class="btn-print" onclick="window.print()" title="인쇄 창의 [머리글 및 바닥글]을 체크 해제하면 날짜/URL이 출력되지 않습니다">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        인쇄 / PDF 저장
+      </button>
+    </div>
+  </header>
+
+  <!-- A4 Printable Sheet -->
+  <main class="page-container">
+    <article class="page">
+
+      <!-- HEADING -->
+      <header class="header">
+        <h1 class="name">{{ profile.name }}</h1>
+        <div class="contact-info">
+          <span>{{ profile.location }}</span>
+          <span class="sep">|</span>
+          <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+          <span class="sep">|</span>
+          <a href="{{ profile.website }}" target="_blank">{{ profile.website | clean_url }}</a>
+          <!-- <span class="sep">|</span> -->
+          <br />
+          <a href="{{ profile.github }}" target="_blank">{{ profile.github | clean_url }}</a>
+          <span class="sep">|</span>
+          <a href="{{ profile.linkedin }}" target="_blank">{{ profile.linkedin | clean_url }}</a>
+        </div>
+      </header>
+
+      <!-- EDUCATION -->
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+        {% for edu in education %}
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>{{ edu.institution | latex_to_html }}</strong></span>
+            <span class="entry-right-1">{{ edu.location | latex_to_html }}</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2">{{ edu.degree | latex_to_html }}</span>
+            <span class="entry-right-2">{{ edu.period | latex_to_html }}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section">
+        <h2 class="section-title">Experience</h2>
+        {% for exp in experience %}
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>{{ exp.institution | latex_to_html }}</strong></span>
+            <span class="entry-right-1">{{ exp.location | latex_to_html }}</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2">{{ exp.role | latex_to_html }}</span>
+            <span class="entry-right-2">{{ exp.period | latex_to_html }}</span>
+          </div>
+          {% if exp.highlights %}
+          <ul class="bullet-list">
+            {% for item in exp.highlights %}
+            <li class="bullet-item">{{ item | latex_to_html }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section">
+        <h2 class="section-title">Projects</h2>
+        {% for proj in projects %}
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1">
+              <strong>{{ proj.title | latex_to_html }}</strong>
+              <span class="sep">|</span>
+              <em>{{ proj.category | latex_to_html }}, {{ proj.tools | latex_to_html }}</em>
+            </span>
+            <span class="entry-right-1">{{ proj.period | latex_to_html }}</span>
+          </div>
+          {% if proj.highlights %}
+          <ul class="bullet-list">
+            {% for item in proj.highlights %}
+            <li class="bullet-item">{{ item | latex_to_html }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section class="section">
+        <h2 class="section-title">Publications</h2>
+        {% for pub in publications %}
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>{{ pub.title | latex_to_html }}</strong></span>
+            <span class="entry-right-1">{{ pub.period | latex_to_html }}</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><em>{{ pub.venue | latex_to_html }}</em></span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><em>{{ pub.authors | latex_to_html }}</em></span>
+          </div>
+          {% if pub.description %}
+          <ul class="bullet-list">
+            <li class="bullet-item">{{ pub.description | latex_to_html }}</li>
+          </ul>
+          {% endif %}
+          <!-- <ul class="bullet-list">
+            <li class="bullet-item">{{ pub.authors | latex_to_html }}</li>
+          </ul> -->
+        </div>
+        {% endfor %}
+      </section>
+
+      <!-- PATENTS -->
+      <section class="section">
+        <h2 class="section-title">Patents</h2>
+        {% for pat in patents %}
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1">
+              <strong>{{ pat.title | latex_to_html }}</strong>
+              <span class="sep">|</span>
+              <em>{{ pat.patent_no | latex_to_html }}</em>
+            </span>
+            <span class="entry-right-1">{{ pat.period | latex_to_html }}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </section>
+
+      <!-- HONORS & AWARDS -->
+      <section class="section">
+        <h2 class="section-title">Honors &amp; Awards</h2>
+        {% for award in awards %}
+        {% if award.is_long %}
+        <!-- 3-line format for long competition names (wrapped) -->
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>{{ award.rank | latex_to_html }}</strong></span>
+            <span class="entry-right-1">{{ award.date | latex_to_html }}</span>
+          </div>
+          <div class="award-competition indent">
+            <span><em>{{ award.competition | latex_to_html }}</em></span>
+          </div>
+          {% if award.issuer %}
+          <div class="award-issuer indent">
+            <span>Issued by {{ award.issuer | latex_to_html }}</span>
+          </div>
+          {% endif %}
+        </div>
+        {% else %}
+        <!-- Standard format for compact competition names (single line) -->
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1">
+              <strong>{{ award.rank | latex_to_html }}</strong>
+              <span class="sep">|</span>
+              <em>{{ award.competition | latex_to_html }}</em>
+            </span>
+            <span class="entry-right-1">{{ award.date | latex_to_html }}</span>
+          </div>
+          {% if award.issuer %}
+          <div class="award-issuer indent">
+            <span>Issued by {{ award.issuer | latex_to_html }}</span>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% endfor %}
+      </section>
+
+    </article>
+  </main>
+
+  <script>
+    function changeFont(fontClass) {
+      document.body.classList.remove('font-source-serif', 'font-garamond', 'font-baskerville', 'font-cm');
+      document.body.classList.add(fontClass);
+      try {
+        localStorage.setItem('cv_preferred_font', fontClass);
+      } catch (e) { }
+    }
+
+    // Auto-restore saved font preference
+    (function () {
+      try {
+        const saved = localStorage.getItem('cv_preferred_font') || 'font-source-serif';
+        const select = document.getElementById('fontSelect');
+        if (select) select.value = saved;
+        changeFont(saved);
+      } catch (e) { }
+    })();
+  </script>
+
+</body>
+
+</html>

@@ -6,11 +6,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ profile.google_analytics_id }}"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', '{{ profile.google_analytics_id }}');
+        gtag('config', '{{ profile.google_analytics_id }}');
     </script>
     {% endif %}
 
@@ -20,8 +20,7 @@
     <meta name="description"
         content="Academic Profile of {{ profile.name }} - {{ profile.title }} at {{ profile.affiliation | striptags }}">
     {% if site.keywords %}
-    <meta name="keywords"
-        content="{{ profile.name }}, {{ site.keywords }}">
+    <meta name="keywords" content="{{ profile.name }}, {{ site.keywords }}">
     {% endif %}
     <meta name="author" content="{{ profile.name }}">
     {% if site.url %}
@@ -145,6 +144,10 @@
             <a href="#projects" class="nav-link">Projects</a>
             {% endif %}
             <a href="#press" class="nav-link">Press</a>
+            {% if profile.cv_url %}
+            <a href="{{ profile.cv_url }}" class="nav-link" target="_blank"><i class="fa-regular fa-file-pdf"
+                    style="margin-right: 4px;"></i>CV</a>
+            {% endif %}
         </nav>
 
         <!-- Main Content -->
@@ -154,11 +157,11 @@
                 {% for paragraph in about.paragraphs %}
                 <p>{{ paragraph }}</p>
                 {% endfor %}
-                <!--
-                <div class="action-buttons" style="margin-top: 1.25rem;">
-                    <a href="{{ profile.cv_url }}" class="btn btn-primary" target="_blank"><i class="fa-solid fa-download"></i> Download CV</a>
-                </div>
-                -->
+                <!-- {% if profile.cv_url %}
+                <div class="action-buttons" style="margin-top: 1rem;">
+                    <a href="{{ profile.cv_url }}" class="btn btn-primary" target="_blank"><i class="fa-regular fa-file-pdf"></i> View Full CV (PDF)</a>
+                </div> -->
+                {% endif %}
             </section>
 
             <section id="news" class="section animate-on-scroll">
@@ -199,18 +202,20 @@
                             <h4 class="pub-title">{{ pub.title }}</h4>
                             <div class="pub-authors">
                                 {%- if pub.authors is string -%}
-                                    {{ pub.authors | safe }}
+                                {{ pub.authors | safe }}
                                 {%- else -%}
-                                    {%- for author in pub.authors -%}
-                                        {%- if author.url -%}
-                                            <a href="{{ author.url }}" target="_blank" class="pub-author-link {% if author.me %}pub-author-me{% endif %}">{{ author.name }}</a>
-                                        {%- elif author.me -%}
-                                            <b>{{ author.name }}</b>
-                                        {%- else -%}
-                                            <span>{{ author.name }}</span>
-                                        {%- endif -%}
-                                        {%- if not loop.last %}, {% endif -%}
-                                    {%- endfor -%}
+                                {%- for author in pub.authors -%}
+                                {%- if author.url -%}
+                                <a href="{{ author.url }}" target="_blank"
+                                    class="pub-author-link {% if author.me %}pub-author-me{% endif %}">{{ author.name
+                                    }}</a>
+                                {%- elif author.me -%}
+                                <b>{{ author.name }}</b>
+                                {%- else -%}
+                                <span>{{ author.name }}</span>
+                                {%- endif -%}
+                                {%- if not loop.last %}, {% endif -%}
+                                {%- endfor -%}
                                 {%- endif -%}
                             </div>
                             <div class="pub-venue">{{ pub.venue }}</div>

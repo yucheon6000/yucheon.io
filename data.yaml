@@ -11,7 +11,7 @@ profile:
   email: "yucheon6000@gm.gist.ac.kr"
   location: "Gwangju, South Korea"
   image_url: "https://avatars.githubusercontent.com/u/95568961?v=4"
-  cv_url: "assets/cv/cv.pdf"
+  cv_url: "assets/cv/Yucheon_Park_CV.pdf"
   google_analytics_id: "G-6MWN7J2RWQ"
   social:
     google_scholar: "https://scholar.google.com/citations?user=YNZB8MMAAAAJ&hl=en"
@@ -23,6 +23,7 @@ about:
   paragraphs:
     - "Hello! I am an Integrated M.S./Ph.D. student at Gwangju Institute of Science and Technology (GIST), working in the Cognition & Intelligence Lab under the supervision of Prof. Kyung-Joong Kim. Previously, I received my Bachelor's degree in Game Design and Business Administration from Kongju National University."
     - "My research focuses on <b>Game Artificial Intelligence</b> and <b>Affective Computing</b>. I am interested in applying AI widely across the gaming domain."
+    - "You can find my CV <a href='assets/cv/Yucheon_Park_CV.pdf' target='_blank'><b>here</b></a>."
 
 news:
   - date: "Sep 2026"
@@ -81,6 +82,8 @@ publications:
     venue: "IEEE Conference on Games (CoG) 2026 · Auxiliary Paper · Sep, 2026 (Accepted)"
     image_url: "./assets/images/vlm-pcg-eval.jpg"
     links:
+      - label: "Paper"
+        url: "./assets/pdf/CoG 2026 Paper.pdf"
       - label: "Presentation"
         url: "./assets/pdf/CoG 2026 Presentation.pdf"
 
@@ -98,7 +101,7 @@ publications:
     links:
       - label: "Paper"
         url: "https://dl.acm.org/doi/10.1145/3772318.3791702"
-  
+
   - year: "2025"
     title: "A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation"
     authors:
@@ -115,7 +118,7 @@ publications:
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2510.25725"
-  
+
   - year: "2024"
     title: "A Study on the Development Method of Mobility AR Content Interacting with Environmental Objects in Autonomous Driving Situations"
     authors:
@@ -128,7 +131,7 @@ publications:
         url: "./assets/pdf/Mobility AR Content.pdf"
       - label: "Poster"
         url: "./assets/pdf/Mobility AR Content_Poster.pdf"
-  
+
   - year: "2023"
     title: "A Proposal for a Novel Input-Output Approach in Interactive Media Games: A Study on Shadow Detection Technology"
     authors:
@@ -170,9 +173,9 @@ press:
     link: "https://www.donga.com/news/Society/article/all/20260329/133628611/1"
     image_url: "https://dimg.donga.com/wps/NEWS/IMAGE/2026/03/29/133628621.1.jpg"
     type: "News"
-  
+
   - date: "Dec 2025"
-    title: "GIST Hosts \"Metamorph,\" an Interactive Digital Exhibition"
+    title: 'GIST Hosts "Metamorph," an Interactive Digital Exhibition'
     source: "Dong-A Easy Edu"
     link: "https://edu.donga.com/news/articleView.html?idxno=100126"
     image_url: "https://cdn.edu.donga.com/news/photo/202512/100126_163494_3840.jpg"
@@ -185,37 +188,37 @@ old_press:
     link: "https://www.viva100.com/article/20241114501264"
     image_url: "https://stqnq5ux4599.edge.naverncp.com/data2/content/image/2024/11/14/.cache/512/20241114501261.jpg"
     type: "News"
-  
+
   - date: "Nov 2024"
-    title: "\"Come discover a variety of games!\" Kongju National University’s Department of Game Design Graduation Exhibition to be held at G-STAR"
+    title: '"Come discover a variety of games!" Kongju National University’s Department of Game Design Graduation Exhibition to be held at G-STAR'
     source: "Game Donga"
     link: "https://game.donga.com/114538/"
     image_url: "https://game.donga.com/media/__sized__/images/2024/11/6/65f8ea52f580410e-thumbnail-1920x1080-70.jpg"
     type: "News"
-    
+
   - date: "May 2024"
     title: "ICT Mentoring Program Has Produced 70,000 Mentees Over 20 Years, Receiving High Praise from Participants… Hopes It Will Continue to Grow and Contribute to the Development of Digital Talent"
     source: "Electronic Times"
     link: "https://www.etnews.com/20240526000047"
     image_url: "https://img.etnews.com/news/article/2024/05/26/news-p.v1.20240526.485a5d4a975946bc880fb939ccfc887d_P1.jpg"
     type: "News"
-  
+
   - date: "Mar 2023"
     title: "I'm Revealing the Secrets Behind Winning a Minister's Award as a College Student... The Ultimate Guide to Extracurricular Activities | ⭐ A Must-Watch for College Students"
     source: "IT's okay YouTube Channel"
     link: "https://youtu.be/VGkL29jGhhw?si=j27neG7sub0wk-Vl"
     image_url: "https://i3.ytimg.com/vi/VGkL29jGhhw/maxresdefault.jpg"
     type: "Video"
-  
+
   - date: "Dec 2022"
     title: "'2022 ICT Mentoring' Concludes Successfully... ENTER, Spingle, and 100 Take Home Top Prizes"
     source: "ZDNET Korea"
     link: "https://zdnet.co.kr/view/?no=20221227082215"
     image_url: "https://image.zdnet.co.kr/2022/12/27/6b44919c1503d0a3757e8911f375e315.jpg"
     type: "News"
-  
+
   - date: "Nov 2020"
-    title: "\"I Am a [Student]\" Episode 6: I Feel the Warmth of the World"
+    title: '"I Am a [Student]" Episode 6: I Feel the Warmth of the World'
     source: "Bilibili Variety Youtube Channel"
     link: "https://youtu.be/h2k9Zcoujr0?si=2nSidzewDB90qrF9"
     image_url: "https://i3.ytimg.com/vi/fYSo9Eeel9Q/maxresdefault.jpg"
@@ -227,5 +230,3 @@ old_press:
     link: "https://www.ebaekje.co.kr/news/articleView.html?idxno=82788"
     type: "News"
     # image_url: "https://image.zdnet.co.kr/2022/12/27/6b44919c1503d0a3757e8911f375e315.jpg"
-
-  
