@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yucheon Park - Curriculum Vitae</title>
-  <!-- Academic Fonts: Source Serif 4 (Clean Modern Italic), EB Garamond, Libre Baskerville, Computer Modern -->
+  <!-- Academic Fonts: Source Serif 4, EB Garamond, Libre Baskerville, Computer Modern -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -28,11 +28,11 @@
       font-family: "Source Serif 4", "Computer Modern Serif", "Latin Modern Roman", "Times New Roman", Times, serif;
       background-color: #f1f3f5;
       color: #000;
-      line-height: 1.35;
+      line-height: 1.33;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Font Themes selectable from toolbar */
+    /* Font Themes */
     body.font-source-serif {
       font-family: "Source Serif 4", "Times New Roman", Times, serif;
     }
@@ -56,7 +56,7 @@
       z-index: 1000;
       background: #1e293b;
       color: #f8fafc;
-      padding: 10px 20px;
+      padding: 9px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -83,7 +83,7 @@
 
     .toolbar-actions {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       align-items: center;
     }
 
@@ -99,96 +99,87 @@
       background: #334155;
       color: #ffffff;
       border: 1px solid #475569;
-      border-radius: 6px;
-      padding: 6px 10px;
+      border-radius: 4px;
+      padding: 4px 8px;
       font-size: 12px;
       cursor: pointer;
-      outline: none;
-      transition: background 0.15s ease, border-color 0.15s ease;
     }
 
-    .font-select:hover {
-      background: #475569;
-      border-color: #64748b;
-    }
-
-    .toolbar-tip {
-      color: #94a3b8;
+    .btn-toggle-filter {
+      background: #0f766e;
+      color: white;
+      border: 1px solid #14b8a6;
+      border-radius: 4px;
+      padding: 5px 10px;
       font-size: 12px;
+      cursor: pointer;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
     }
 
-    .btn-print {
+    .btn-toggle-filter:hover {
+      background: #115e59;
+    }
+
+    .btn-print,
+    .btn-download {
       background: #2563eb;
       color: white;
       border: none;
-      padding: 7px 16px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 13px;
+      border-radius: 4px;
+      padding: 5px 12px;
+      font-size: 12px;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 6px;
+      font-weight: 500;
+      text-decoration: none;
       transition: background 0.15s ease;
     }
 
-    .btn-print:hover {
+    .btn-print:hover,
+    .btn-download:hover {
       background: #1d4ed8;
     }
 
-    .btn-download {
-      background: #059669;
-      color: white;
-      text-decoration: none;
-      border: none;
-      padding: 7px 16px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 13px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: background 0.15s ease;
-    }
-
-    .btn-download:hover {
-      background: #047857;
-    }
-
-    /* A4 Paper Container */
+    /* Page Container */
     .page-container {
-      padding: 24px 0 60px 0;
       display: flex;
       justify-content: center;
+      padding: 24px 12px;
     }
 
     .page {
       background: #ffffff;
       width: 210mm;
       min-height: 297mm;
-      padding: 14mm 16mm;
+      padding: 9mm 13mm;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
-      font-size: 11pt;
+      font-size: 10pt;
     }
 
     /* LaTeX Heading */
     .header {
       text-align: center;
-      margin-bottom: 12pt;
+      margin-bottom: 6pt;
     }
 
     .name {
-      font-size: 22pt;
+      font-size: 20.5pt;
       font-weight: bold;
       font-variant: small-caps;
       letter-spacing: 0.5px;
-      margin-bottom: 3pt;
+      margin-bottom: 2pt;
     }
 
     .contact-info {
-      font-size: 9.5pt;
+      font-size: 9.1pt;
       color: #111;
+      line-height: 1.32;
     }
 
     .contact-info a {
@@ -196,30 +187,42 @@
       text-decoration: underline;
     }
 
+    .research-interests {
+      margin-top: 3pt;
+      font-size: 9pt;
+      color: #222;
+      line-height: 1.28;
+    }
+
+    .research-interests strong {
+      font-weight: bold;
+      color: #000;
+    }
+
     .sep {
-      margin: 0 3.5pt;
-      color: #444;
+      margin: 0 3pt;
+      color: #555;
     }
 
     /* LaTeX Section */
     .section {
-      margin-top: 9pt;
-      margin-bottom: 4pt;
+      margin-top: 6pt;
+      margin-bottom: 2pt;
     }
 
     .section-title {
-      font-size: 12.5pt;
+      font-size: 11.2pt;
       font-weight: bold;
       font-variant: small-caps;
       border-bottom: 1px solid #000;
-      padding-bottom: 1.5pt;
-      margin-bottom: 5pt;
+      padding-bottom: 1pt;
+      margin-bottom: 3pt;
       letter-spacing: 0.3px;
     }
 
     /* Entry Rows */
     .entry {
-      margin-bottom: 5pt;
+      margin-bottom: 3pt;
       break-inside: avoid;
       page-break-inside: avoid;
     }
@@ -228,13 +231,13 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 10pt;
+      font-size: 9.4pt;
     }
 
     .entry-left-1 {
       font-weight: normal;
       flex: 1;
-      padding-right: 12pt;
+      padding-right: 10pt;
     }
 
     .entry-left-1 strong {
@@ -244,22 +247,22 @@
     .entry-right-1 {
       white-space: nowrap;
       text-align: right;
-      font-size: 10pt;
+      font-size: 9.1pt;
     }
 
     .entry-row-2 {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 9pt;
+      font-size: 8.7pt;
       font-style: italic;
       color: #111;
-      margin-top: 1pt;
+      margin-top: 0.5pt;
     }
 
     .entry-left-2 {
       flex: 1;
-      padding-right: 12pt;
+      padding-right: 10pt;
     }
 
     .entry-right-2 {
@@ -267,45 +270,66 @@
       text-align: right;
     }
 
-    .entry-row-3 {
-      font-size: 8.5pt;
-      font-style: italic;
-      color: #222;
-      margin-top: 1pt;
-    }
-
-    /* Award specific rows: keep competition font size at 10pt when broken */
+    /* Award specific rows */
     .award-competition {
-      font-size: 10pt;
+      font-size: 9.1pt;
       font-style: italic;
       color: #000;
-      margin-top: 1pt;
-      line-height: 1.32;
+      margin-top: 0.5pt;
+      line-height: 1.25;
     }
 
     .award-issuer {
-      font-size: 8.5pt;
+      font-size: 8.2pt;
       font-style: italic;
       color: #222;
-      margin-top: 1pt;
+      margin-top: 0.5pt;
     }
 
-    /* Indent for sub-rows (LaTeX \quad) */
     .indent {
-      /* padding-left: 1.25em; */
+      /* padding-left: 0.5em; */
     }
 
     /* Bullets */
     .bullet-list {
       list-style-type: disc;
-      margin: 2pt 0 3pt 18pt;
+      margin: 1pt 0 1.5pt 14pt;
       padding: 0;
-      font-size: 9.5pt;
+      font-size: 8.8pt;
     }
 
     .bullet-item {
+      margin-bottom: 0.8pt;
+      line-height: 1.25;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      font-size: 9pt;
+      line-height: 1.3;
+      margin-top: 1.5pt;
+    }
+
+    .skill-row {
       margin-bottom: 1.5pt;
-      line-height: 1.32;
+      display: flex;
+    }
+
+    .skill-category {
+      font-weight: bold;
+      min-width: 140px;
+      color: #000;
+      padding-right: 6pt;
+    }
+
+    .skill-items {
+      flex: 1;
+      color: #111;
+    }
+
+    /* Award Selected Filter Mode */
+    body.filter-selected .award-entry:not(.is-selected) {
+      display: none !important;
     }
 
     /* Print Styles */
@@ -342,10 +366,9 @@
 
       @page {
         size: A4;
-        margin: 12mm 15mm;
+        margin: 8.5mm 12.5mm;
       }
 
-      /* Prevent page breaks inside entries */
       .entry,
       .section-title {
         break-inside: avoid;
@@ -365,25 +388,28 @@
   </style>
 </head>
 
-<body>
+<body class="font-source-serif filter-selected">
 
   <!-- Screen Toolbar -->
   <header class="toolbar no-print">
     <div class="toolbar-title">
-      <span>📄 Yucheon Park — CV Renderer</span>
-      <span class="toolbar-badge">A4 PDF Ready</span>
+      <span>📄 Yucheon Park — Academic CV</span>
+      <span class="toolbar-badge">A4 2-Page Ready</span>
     </div>
     <div class="toolbar-actions">
       <div class="font-selector-wrap">
-        <label for="fontSelect">✍️ 폰트 / 이탤릭 스타일:</label>
+        <label for="fontSelect">✍️ 폰트 스타일:</label>
         <select id="fontSelect" class="font-select" onchange="changeFont(this.value)">
           <option value="font-source-serif" selected>Source Serif 4 (추천 · 가장 깔끔)</option>
-          <option value="font-garamond">EB Garamond (우아한 클래식 학술체)</option>
-          <option value="font-baskerville">Libre Baskerville (또렷한 가독성)</option>
+          <option value="font-garamond">EB Garamond (클래식 학술체)</option>
+          <option value="font-baskerville">Libre Baskerville (가독성)</option>
           <option value="font-cm">Computer Modern (LaTeX 기본값)</option>
         </select>
       </div>
-      <a href="cv.pdf" download="Yucheon_Park_CV.pdf" class="btn-download" title="헤더/URL 없이 사전 렌더링된 완벽한 A4 PDF 파일 다운로드">
+      <button id="awardFilterBtn" class="btn-toggle-filter" onclick="toggleAwardFilter()" title="A4 2페이지에 최적화된 주요 수상 목록과 전체 수상 목록을 전환합니다">
+        <span>★ Selected Awards (2-Page)</span>
+      </button>
+      <a href="cv.pdf" download="Yucheon_Park_CV.pdf" class="btn-download" title="A4 PDF 파일 다운로드">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="7 10 12 15 17 10"></polyline>
@@ -391,7 +417,7 @@
         </svg>
         PDF 다운로드
       </a>
-      <button class="btn-print" onclick="window.print()" title="인쇄 창의 [머리글 및 바닥글]을 체크 해제하면 날짜/URL이 출력되지 않습니다">
+      <button class="btn-print" onclick="window.print()" title="인쇄 창의 [머리글 및 바닥글] 체크 해제 권장">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
           <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -416,11 +442,13 @@
           <a href="mailto:yucheon6000@gm.gist.ac.kr">yucheon6000@gm.gist.ac.kr</a>
           <span class="sep">|</span>
           <a href="https://yucheon.io/" target="_blank">yucheon.io</a>
-          <!-- <span class="sep">|</span> -->
           <br />
           <a href="https://github.com/yucheon6000" target="_blank">github.com/yucheon6000</a>
           <span class="sep">|</span>
           <a href="https://linkedin.com/in/yucheon" target="_blank">linkedin.com/in/yucheon</a>
+        </div>
+        <div class="research-interests">
+          <strong>Research Interests:</strong> <em>게임 인공지능, 어펙티브 컴퓨팅, 인터랙티브 미디어, 비전-언어 모델</em>
         </div>
       </header>
 
@@ -469,9 +497,92 @@
         </div>
       </section>
 
+      <!-- PUBLICATIONS (★ Promoted to Front for Academic Impact) -->
+      <section class="section">
+        <h2 class="section-title">Publications</h2>
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>Whirling Wishes: A Paper-and-Breath Interactive Media Installation for Hospital Waiting Spaces</strong></span>
+            <span class="entry-right-1">Dec. 2026</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><em>ACM SIGGRAPH Asia 2026, Poster (Accepted)</em></span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><strong>Y. Park</strong>, Y. Lee, S.-H. Kim, E. Kwon, E. Song, and K.-J. Kim</span>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>Judging the Imitation Game: Exploring Creator Bias in VLM-Based PCG Level Evaluation</strong></span>
+            <span class="entry-right-1">Sep. 2026</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><em>IEEE Conference on Games (IEEE CoG 2026), Auxiliary Paper</em></span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><strong>Y. Park</strong>, G.-H. Hwang, and K.-J. Kim</span>
+          </div>
+          <ul class="bullet-list">
+            <li class="bullet-item">게임플레이 영상 기반의 VLM 절차적 레벨 평가에서, 인간 제작 인식에 따른 점수 상승 편향(Creator Bias)을 규명하고 상대적 순위 평가의 일관성을 실증.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>PREFAB: PREFerence-based Affective Modeling for Low-Budget Self-Annotation</strong></span>
+            <span class="entry-right-1">Apr. 2026</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><em>ACM CHI 2026 <strong>[Honourable Mention]</strong></em></span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2">J. Moon, Y. Choi, <strong>Y. Park</strong>, D. Melhart, G. N. Yannakakis, and K.-J. Kim</span>
+          </div>
+          <ul class="bullet-list">
+            <li class="bullet-item">감정 변곡 구간(Inflection Regions) 중심의 선호 학습(Preference Learning)을 통해 사용자 피로도와 라벨링 부담을 대폭 줄이면서도 전체 감정 궤적을 신뢰도 높게 복원하는 프레임워크 제안.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation</strong></span>
+            <span class="entry-right-1">Oct. 2025</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><em>IROS 2025 Workshop on Robotic Fine Manipulation</em></span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2">E. Kwon, S. Oh, I.-C. Baek, <strong>Y. Park</strong>, G. Kim, J. Moon, Y. Choi, and K.-J. Kim</span>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>A Study on the Development Method of Mobility AR Content Interacting with Environmental Objects in Autonomous Driving Situations</strong></span>
+            <span class="entry-right-1">Oct. 2024</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><em>Korean Institute of Smart Media (2024 Fall Academic Conference)</em></span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><strong>Y. Park</strong> and B. Kyung</span>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-row-1">
+            <span class="entry-left-1"><strong>A Proposal for a Novel Input-Output Approach in Interactive Media Games: A Study on Shadow Detection Technology</strong></span>
+            <span class="entry-right-1">Jun. 2023</span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><em>Korea Game Society (2023 Spring Academic Conference)</em></span>
+          </div>
+          <div class="entry-row-2">
+            <span class="entry-left-2"><strong>Y. Park</strong>, Y. Kang, G. Park, Y. Jang, D. Jung, and B. Kyung</span>
+          </div>
+        </div>
+      </section>
+
       <!-- EXPERIENCE -->
       <section class="section">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title">Research &amp; Work Experience</h2>
         <div class="entry">
           <div class="entry-row-1">
             <span class="entry-left-1"><strong>Cognition &amp; Intelligence Lab, GIST</strong></span>
@@ -513,9 +624,9 @@
         </div>
       </section>
 
-      <!-- PROJECTS -->
+      <!-- SELECTED PROJECTS -->
       <section class="section">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Selected Projects</h2>
         <div class="entry">
           <div class="entry-row-1">
             <span class="entry-left-1">
@@ -612,107 +723,6 @@
         </div>
       </section>
 
-      <!-- PUBLICATIONS -->
-      <section class="section">
-        <h2 class="section-title">Publications</h2>
-        <div class="entry">
-          <div class="entry-row-1">
-            <span class="entry-left-1"><strong>Whirling Wishes: A Paper-and-Breath Interactive Media Installation for Hospital Waiting Spaces</strong></span>
-            <span class="entry-right-1">Dec. 2026</span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em>ACM SIGGRAPH Asia 2026, Poster (Accepted)</em></span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em><strong>Y. Park</strong>, Y. Lee, S.-H. Kim, E. Kwon, E. Song, and K.-J. Kim</em></span>
-          </div>
-          <!-- <ul class="bullet-list">
-            <li class="bullet-item"><strong>Y. Park</strong>, Y. Lee, S.-H. Kim, E. Kwon, E. Song, and K.-J. Kim</li>
-          </ul> -->
-        </div>
-        <div class="entry">
-          <div class="entry-row-1">
-            <span class="entry-left-1"><strong>Judging the Imitation Game: Exploring Creator Bias in VLM-Based PCG Level Evaluation</strong></span>
-            <span class="entry-right-1">Sep. 2026</span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em>IEEE Conference on Games (IEEE CoG 2026), Auxiliary Paper</em></span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em><strong>Y. Park</strong>, G.-H. Hwang, and K.-J. Kim</em></span>
-          </div>
-          <ul class="bullet-list">
-            <li class="bullet-item">게임플레이 영상 기반의 VLM 절차적 레벨 평가에서, 인간 제작 인식에 따른 점수 상승 편향(Creator Bias)을 규명하고 상대적 순위 평가의 일관성을 실증.</li>
-          </ul>
-          <!-- <ul class="bullet-list">
-            <li class="bullet-item"><strong>Y. Park</strong>, G.-H. Hwang, and K.-J. Kim</li>
-          </ul> -->
-        </div>
-        <div class="entry">
-          <div class="entry-row-1">
-            <span class="entry-left-1"><strong>PREFAB: PREFerence-based Affective Modeling for Low-Budget Self-Annotation</strong></span>
-            <span class="entry-right-1">Apr. 2026</span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em>ACM CHI 2026 <strong>[Honourable Mention]</strong></em></span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em>J. Moon, Y. Choi, <strong>Y. Park</strong>, D. Melhart, G. N. Yannakakis, and K.-J. Kim</em></span>
-          </div>
-          <ul class="bullet-list">
-            <li class="bullet-item">감정 변곡 구간(Inflection Regions) 중심의 선호 학습(Preference Learning)을 통해 사용자 피로도와 라벨링 부담을 대폭 줄이면서도 전체 감정 궤적을 신뢰도 높게 복원하는 프레임워크 제안.</li>
-          </ul>
-          <!-- <ul class="bullet-list">
-            <li class="bullet-item">J. Moon, Y. Choi, <strong>Y. Park</strong>, D. Melhart, G. N. Yannakakis, and K.-J. Kim</li>
-          </ul> -->
-        </div>
-        <div class="entry">
-          <div class="entry-row-1">
-            <span class="entry-left-1"><strong>A Humanoid Visual-Tactile-Action Dataset for Contact-Rich Manipulation</strong></span>
-            <span class="entry-right-1">Oct. 2025</span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em>IROS 2025 Workshop on Robotic Fine Manipulation</em></span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em>E. Kwon, S. Oh, I.-C. Baek, <strong>Y. Park</strong>, G. Kim, J. Moon, Y. Choi, and K.-J. Kim</em></span>
-          </div>
-          <!-- <ul class="bullet-list">
-            <li class="bullet-item">E. Kwon, S. Oh, I.-C. Baek, <strong>Y. Park</strong>, G. Kim, J. Moon, Y. Choi, and K.-J. Kim</li>
-          </ul> -->
-        </div>
-        <div class="entry">
-          <div class="entry-row-1">
-            <span class="entry-left-1"><strong>A Study on the Development Method of Mobility AR Content Interacting with Environmental Objects in Autonomous Driving Situations</strong></span>
-            <span class="entry-right-1">Oct. 2024</span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em>Korean Institute of Smart Media (2024 Fall Academic Conference)</em></span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em><strong>Y. Park</strong> and B. Kyung</em></span>
-          </div>
-          <!-- <ul class="bullet-list">
-            <li class="bullet-item"><strong>Y. Park</strong> and B. Kyung</li>
-          </ul> -->
-        </div>
-        <div class="entry">
-          <div class="entry-row-1">
-            <span class="entry-left-1"><strong>A Proposal for a Novel Input-Output Approach in Interactive Media Games: A Study on Shadow Detection Technology</strong></span>
-            <span class="entry-right-1">Jun. 2023</span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em>Korea Game Society (2023 Spring Academic Conference)</em></span>
-          </div>
-          <div class="entry-row-2">
-            <span class="entry-left-2"><em><strong>Y. Park</strong>, Y. Kang, G. Park, Y. Jang, D. Jung, and B. Kyung</em></span>
-          </div>
-          <!-- <ul class="bullet-list">
-            <li class="bullet-item"><strong>Y. Park</strong>, Y. Kang, G. Park, Y. Jang, D. Jung, and B. Kyung</li>
-          </ul> -->
-        </div>
-      </section>
-
       <!-- PATENTS -->
       <section class="section">
         <h2 class="section-title">Patents</h2>
@@ -730,9 +740,11 @@
 
       <!-- HONORS & AWARDS -->
       <section class="section">
-        <h2 class="section-title">Honors &amp; Awards</h2>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <h2 class="section-title">
+          <span id="awardsTitle">Selected Honors &amp; Awards</span>
+        </h2>
+        <div class="entry award-entry is-selected">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>Honorable Mention</strong>
@@ -745,8 +757,8 @@
             <span>Issued by ACM, SIGCHI, General Chairs, Award Chairs</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry is-selected">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>1st Place</strong>
@@ -759,8 +771,8 @@
             <span>Issued by KRAFTON</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>Excellent Startup Club</strong>
@@ -773,8 +785,8 @@
             <span>Issued by Director of Industry-Academic Cooperation Foundation, Kongju National University</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>Award for Outstanding Contribution</strong>
@@ -787,8 +799,8 @@
             <span>Issued by Head of the Department of Game Design</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>3rd Place</strong>
@@ -801,8 +813,8 @@
             <span>Issued by Director of the Cheonan Institute of Science &amp; Technology Platform</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>3rd Place</strong>
@@ -815,8 +827,8 @@
             <span>Issued by President of Kongju National University</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>2nd Place</strong>
@@ -829,8 +841,8 @@
             <span>Issued by Director of Chungnam Information Culture Technology Industry Agency</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry is-selected">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>3rd Place</strong>
@@ -843,8 +855,8 @@
             <span>Issued by Director of the Gumi Electronics &amp; Information Technology Research Institute</span>
           </div>
         </div>
-        <!-- 3-line format for long competition names (wrapped) -->
-        <div class="entry">
+        <div class="entry award-entry is-selected">
+          <!-- Wrapped format for long competition names -->
           <div class="entry-row-1">
             <span class="entry-left-1"><strong>2nd Place</strong></span>
             <span class="entry-right-1">Aug. 2024</span>
@@ -856,8 +868,8 @@
             <span>Issued by The Communist Party of Shanghai Municipal Education and Health Work Committee, Shanghai Municipal Education Commission</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry is-selected">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>TOP 20</strong>
@@ -870,8 +882,8 @@
             <span>Issued by Director of Korea Mobile Game Association</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry is-selected">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>2nd Place</strong>
@@ -884,8 +896,8 @@
             <span>Issued by President of Gwangju Institute of Science and Technology, President of Hannam University</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>3rd Place</strong>
@@ -898,8 +910,8 @@
             <span>Issued by NEAR Korea</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry is-selected">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>Excellence Prize</strong>
@@ -912,8 +924,8 @@
             <span>Issued by Director of Daejeon Information &amp; Culture Industry Promotion Agency</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry is-selected">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>The Grand Prize</strong>
@@ -926,8 +938,8 @@
             <span>Issued by Minister of Science and ICT</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>The Grand Prize</strong>
@@ -940,8 +952,8 @@
             <span>Issued by President of Kongju National University</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>Encouragement Prize</strong>
@@ -954,8 +966,8 @@
             <span>Issued by Director of Chungnam Institute of History and Culture</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>Encouragement Prize</strong>
@@ -968,8 +980,8 @@
             <span>Issued by Deputy Chief of Staff for Personnel, Republic of Korea Air Force Headquarters</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry is-selected">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>The Grand Prize (Gold Prize)</strong>
@@ -982,8 +994,8 @@
             <span>Issued by Animation, Comics and Games Professional, Committee of China Cultural Chamber of Commerce of the Private Sector, Korean Game Society, Jilin Animation Institute, Animation and Game Association of Jilin Province</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>Encouragement Prize</strong>
@@ -996,8 +1008,8 @@
             <span>Issued by Director of Teaching and Learning Support Center at Kongju National University</span>
           </div>
         </div>
-        <!-- Standard format for compact competition names (single line) -->
-        <div class="entry">
+        <div class="entry award-entry ">
+          <!-- Compact single-line format -->
           <div class="entry-row-1">
             <span class="entry-left-1">
               <strong>The Grand Prize</strong>
@@ -1008,6 +1020,29 @@
           </div>
           <div class="award-issuer indent">
             <span>Issued by Director of University Education Planning Division at Kongju National University</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNICAL SKILLS -->
+      <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-row">
+            <span class="skill-category">프로그래밍 언어 (Languages):</span>
+            <span class="skill-items">Python, C#, JavaScript</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">인공지능 &amp; 비전 (AI &amp; Vision):</span>
+            <span class="skill-items">PyTorch, Vision-Language Models (VLM), OpenCV</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">게임 &amp; XR (Game &amp; XR):</span>
+            <span class="skill-items">Unity (3D/2D), Meta Quest (VR)</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-category">도구 &amp; 디자인 (Tools &amp; Design):</span>
+            <span class="skill-items">Git, Figma, Adobe Photoshop / Illustrator / Premiere Pro</span>
           </div>
         </div>
       </section>
@@ -1024,13 +1059,47 @@
       } catch (e) { }
     }
 
-    // Auto-restore saved font preference
+    function toggleAwardFilter() {
+      const isFiltered = document.body.classList.toggle('filter-selected');
+      const btn = document.getElementById('awardFilterBtn');
+      const title = document.getElementById('awardsTitle');
+      if (btn) {
+        if (isFiltered) {
+          btn.innerHTML = '<span>★ Selected Awards (2-Page)</span>';
+          btn.style.background = '#0f766e';
+          if (title) title.textContent = 'Selected Honors & Awards';
+        } else {
+          btn.innerHTML = '<span>📋 All Awards (Full Record)</span>';
+          btn.style.background = '#3b82f6';
+          if (title) title.textContent = 'Honors & Awards';
+        }
+      }
+      try {
+        localStorage.setItem('cv_award_filter', isFiltered ? 'selected' : 'all');
+      } catch (e) { }
+    }
+
+    // Auto-restore saved preferences
     (function () {
       try {
-        const saved = localStorage.getItem('cv_preferred_font') || 'font-source-serif';
+        const savedFont = localStorage.getItem('cv_preferred_font') || 'font-source-serif';
         const select = document.getElementById('fontSelect');
-        if (select) select.value = saved;
-        changeFont(saved);
+        if (select) select.value = savedFont;
+        changeFont(savedFont);
+
+        const savedFilter = localStorage.getItem('cv_award_filter') || 'selected';
+        const title = document.getElementById('awardsTitle');
+        if (savedFilter === 'all') {
+          document.body.classList.remove('filter-selected');
+          const btn = document.getElementById('awardFilterBtn');
+          if (btn) {
+            btn.innerHTML = '<span>📋 All Awards (Full Record)</span>';
+            btn.style.background = '#3b82f6';
+          }
+          if (title) title.textContent = 'Honors & Awards';
+        } else {
+          if (title) title.textContent = 'Selected Honors & Awards';
+        }
       } catch (e) { }
     })();
   </script>

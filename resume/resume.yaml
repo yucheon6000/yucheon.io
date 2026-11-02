@@ -5,6 +5,7 @@ profile:
   website: "https://yucheon.io/"
   github: "https://github.com/yucheon6000"
   linkedin: "https://linkedin.com/in/yucheon"
+  research_interests: "Game AI, Affective Computing, Interactive Media, Vision-Language Models"
 
 education:
   - institution: "Gwangju Institute of Science and Technology (GIST)"
@@ -135,11 +136,13 @@ awards:
     competition: "CHI'26"
     date: "Apr. 2026"
     issuer: "ACM, SIGCHI, General Chairs, Award Chairs"
+    selected: true
 
   - rank: "1st Place"
     competition: "Orak Game Agent Challenge 2025 (SLM Track)"
     date: "Mar. 2026"
     issuer: "KRAFTON"
+    selected: true
 
   - rank: "Excellent Startup Club"
     competition: "2024 KNU Startup Club"
@@ -188,21 +191,25 @@ awards:
     rank_ko: "장려상"
     competition_ko: "2024 XR 디바이스 콘텐츠 메이커톤"
     issuer_ko: "구미전자정보기술원장"
+    selected: true
 
   - rank: "2nd Place"
     competition: '9th "Huichang Youth" Shanghai University Student Cultural and Creative Works Exhibition (Digital Media, Animation Category)'
     date: "Aug. 2024"
     issuer: "The Communist Party of Shanghai Municipal Education and Health Work Committee, Shanghai Municipal Education Commission"
+    selected: true
 
   - rank: "TOP 20"
     competition: "2024 INDIECRAFT Challenger Division"
     date: "Jul. 2024"
     issuer: "Director of Korea Mobile Game Association"
+    selected: true
 
   - rank: "2nd Place"
     competition: "GIST × HDF Micro Design Challenge Hackathon"
     date: "Jul. 2024"
     issuer: "President of Gwangju Institute of Science and Technology, President of Hannam University"
+    selected: true
 
   - rank: "3rd Place"
     competition: "GLITCH Hackathon 2023 (NEAR Protocol Track)"
@@ -213,11 +220,13 @@ awards:
     competition: "2022 Daejeon Newbie Game Development Competition"
     date: "Dec. 2022"
     issuer: "Director of Daejeon Information & Culture Industry Promotion Agency"
+    selected: true
 
   - rank: "The Grand Prize"
     competition: "2022 HANIUM ICT Mentoring Competition"
     date: "Dec. 2022"
     issuer: "Minister of Science and ICT"
+    selected: true
 
   - rank: "The Grand Prize"
     competition: "2022 Kongju National University Start-up Competition"
@@ -238,6 +247,7 @@ awards:
     competition: "2019 The Fourth International Game Jam in China"
     date: "Jul. 2019"
     issuer: "Animation, Comics and Games Professional, Committee of China Cultural Chamber of Commerce of the Private Sector, Korean Game Society, Jilin Animation Institute, Animation and Game Association of Jilin Province"
+    selected: true
 
   - rank: "Encouragement Prize"
     competition: "Learning Content Competition Learning Cloud"
@@ -248,3 +258,14 @@ awards:
     competition: "Learning Portfolio Competition"
     date: "Jan. 2019"
     issuer: "Director of University Education Planning Division at Kongju National University"
+
+skills:
+  - category: "Languages"
+    details: "Python, C#, JavaScript"
+  - category: "AI & Vision"
+    details: "PyTorch, Vision-Language Models (VLM), OpenCV"
+  - category: "Game & XR"
+    details: "Unity (3D/2D), Meta Quest (VR)"
+  - category: "Tools & Design"
+    details: "Git, Figma, Adobe Photoshop / Illustrator / Premiere Pro"
+

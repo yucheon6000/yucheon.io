@@ -26,6 +26,7 @@ OUTPUT_HTML = RESUME_DIR / "index.html"
 OUTPUT_HTML_KR = RESUME_DIR / "index_kr.html"
 OUTPUT_PDF = RESUME_DIR / "cv.pdf"
 ASSETS_CV_PDF = PROJECT_ROOT / "assets" / "cv" / "cv.pdf"
+ASSETS_CV_NAMED_PDF = PROJECT_ROOT / "assets" / "cv" / "Yucheon_Park_CV.pdf"
 
 
 def clean_url(url: str) -> str:
@@ -135,15 +136,16 @@ def compile_pdf():
             chrome_path,
             "--headless",
             "--disable-gpu",
+            "--no-pdf-header-footer",
             f"--print-to-pdf={OUTPUT_PDF}",
-            "--print-to-pdf-no-header",
             f"file://{OUTPUT_HTML.resolve()}",
         ]
         subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL,
                        stderr=subprocess.DEVNULL)
-        # Also sync to assets/cv/cv.pdf for the main website link
+        # Also sync to assets/cv/cv.pdf and Yucheon_Park_CV.pdf for the main website link
         shutil.copyfile(OUTPUT_PDF, ASSETS_CV_PDF)
-        print(f"✓ Compiled A4 PDF: {OUTPUT_PDF} & {ASSETS_CV_PDF}")
+        shutil.copyfile(OUTPUT_PDF, ASSETS_CV_NAMED_PDF)
+        print(f"✓ Compiled A4 PDF: {OUTPUT_PDF} & {ASSETS_CV_NAMED_PDF}")
     except Exception as e:
         print(f"  Note: Automatic PDF compilation skipped ({e})")
 
