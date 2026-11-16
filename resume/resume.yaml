@@ -132,6 +132,12 @@ patents:
     period: "Jan. 2026"
 
 awards:
+  - rank: "Jammer's Choice Award"
+    competition: "Pitt's Games 4 Social Impact 2026 Game Jam"
+    date: "Nov. 2026"
+    issuer: "The University of Pittsburgh School of Computing and Information"
+    selected: true
+
   - rank: "Honorable Mention"
     competition: "CHI'26"
     date: "Apr. 2026"
@@ -268,4 +274,3 @@ skills:
     details: "Unity (3D/2D), Meta Quest (VR)"
   - category: "Tools & Design"
     details: "Git, Figma, Adobe Photoshop / Illustrator / Premiere Pro"
-

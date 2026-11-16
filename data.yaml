@@ -26,6 +26,8 @@ about:
     - "You can find my CV <a href='assets/cv/Yucheon_Park_CV.pdf' target='_blank'><b>here</b></a>."
 
 news:
+  - date: "Nov 2026"
+    content: "Our game '<b>Dollpelganger</b>' won the <b>Jammer's Choice Award</b> at <a href='https://itch.io/jam/pitt-games-4-social-impact-2026/results' target='_blank'><b>Pitt's Games 4 Social Impact 2026 Game Jam</b></a>."
   - date: "Sep 2026"
     content: "Our paper '<b>Whirling Wishes</b>' has been accepted as a poster at <b>ACM SIGGRAPH Asia 2026</b>."
   - date: "Jul 2026"
