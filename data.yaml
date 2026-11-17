@@ -48,7 +48,7 @@ publications:
     title: "Whirling Wishes: A Paper-and-Breath Interactive Media Installation for Hospital Waiting Spaces"
     authors:
       - "@yucheon-park"
-      - "Younsung Lee"
+      - "@younsung-lee"
       - "Sung-Hyun Kim"
       - "@eunju-kwon"
       - "@eunsung-song"
@@ -85,7 +85,7 @@ publications:
     image_url: "./assets/images/vlm-pcg-eval.jpg"
     links:
       - label: "Paper"
-        url: "./assets/pdf/CoG 2026 Paper.pdf"
+        url: "https://ieeexplore.ieee.org/document/11778822"
       - label: "Presentation"
         url: "./assets/pdf/CoG 2026 Presentation.pdf"
 
