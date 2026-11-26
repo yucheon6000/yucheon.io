@@ -53,13 +53,13 @@ publications:
       - "@eunju-kwon"
       - "@eunsung-song"
       - "@kyung-joong-kim"
-    venue: "ACM SIGGRAPH Asia 2026 · Poster · Dec, 2026 (Accepted)"
+    venue: "ACM SIGGRAPH Asia 2026 · Poster · Dec, 2026"
     image_url: "./assets/images/whirling-wishes.jpg"
     links:
       - label: "Paper"
-        url: "./assets/pdf/SIGGRAGH Asia 2026 Paper.pdf"
+        url: "https://dl.acm.org/doi/10.1145/3829333.3847895"
       - label: "Poster"
-        url: "./assets/pdf/SIGGRAGH Asia 2026 Poster.pdf"
+        url: "./assets/pdf/SIGGRAPH Asia 2026 Poster.pdf"
 
   # - year: "2026"
   #   title: "Sole-Interact: A High-Resolution Plantar Pressure Sensing System as a Software-DefinedInput Modality"
@@ -81,7 +81,7 @@ publications:
       - "@yucheon-park"
       - "@geumhwan-hwang"
       - "@kyung-joong-kim"
-    venue: "IEEE Conference on Games (CoG) 2026 · Auxiliary Paper · Sep, 2026 (Accepted)"
+    venue: "IEEE Conference on Games (CoG) 2026 · Auxiliary Paper · Sep, 2026"
     image_url: "./assets/images/vlm-pcg-eval.jpg"
     links:
       - label: "Paper"
